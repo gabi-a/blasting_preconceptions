@@ -1,0 +1,6 @@
+db/*
+.vscode/*
+*.pyc
+*.idea
+Parse/output/*
+C6/*
