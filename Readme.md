@@ -70,3 +70,6 @@ It also saves a list of all codes which could be blasted (i.e. their sequence wa
 To calculate the PEGeq slope and intercept, and visualise it:\
 `>python pegeq.py`\
 This creates `db/pegeq.pkl` which stores the slope.
+
+## Plotting
+`>python plots.py`

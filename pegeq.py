@@ -3,7 +3,7 @@ from scipy import stats
 import pickle
 import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
+def main():
     chemsdict = pickle.load(open("db/chems_dict.pkl","rb"))
     pdbcodes = pickle.load(open("db/nonempty_pdbcodes.pkl","rb"))
 
@@ -17,9 +17,6 @@ if __name__ == "__main__":
                 PEGcount += 1
                 if cond["units"] == "W/V":
                     conc = float(cond["conc"])
-                    PEGcount_knownunits += 1
-                elif cond["units"] == "V/V":
-                    conc = 1.1 * float(cond["conc"])
                     PEGcount_knownunits += 1
                 else:
                     continue
@@ -41,6 +38,8 @@ if __name__ == "__main__":
 
     slope, intercept, r_value, p_value, std_err = stats.linregress(np.log(PEGdata[:,1]), PEGdata[:,0])
 
+    plt.text(6000, 38, f"y = {slope:.3f}x+{intercept:.3f}\n$r^2$ = {r_value**2:.3f}\np = {p_value:.3f}\nstd_err={std_err:.3f}",bbox=dict(facecolor='none', edgecolor='black',pad=10))
+
     pickle.dump(slope, open("db/pegeq.pkl","wb"))
 
     plt.scatter(means[:,0], means[:,1], color="r", zorder=1)
@@ -55,6 +54,12 @@ if __name__ == "__main__":
     plt.xticks(ticks[::2],ticks[::2], rotation=45)
 
     plt.plot(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1), slope*np.log(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1))+intercept)
+    
+    plt.figure()
+    for i,weight in enumerate(np.unique(PEGdata[:,1])):
+        plt.subplot(5,5,i+1)
+        plt.hist(PEGdata[np.where(PEGdata[:,1] == weight), 0][0])
+
     plt.show()
 
 class PEG_Scorer:
@@ -67,3 +72,6 @@ class PEG_Scorer:
         peg1eq = peg1[1] + self.pegslope * dx
         score = np.abs(peg2[1] - peg1eq)
         return score
+
+if __name__ == "__main__":
+    main()

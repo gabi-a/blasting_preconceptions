@@ -34,12 +34,12 @@ for i,pdbcode in enumerate(pdbcodes):
 
         peg1 = None
         for cond in conds1:
-            if "POLYETHYLENE GLYCOL" in cond["chem"]:
+            if "POLYETHYLENE GLYCOL" in cond["chem"] and cond["units"] == "W/V":
                 peg1 = cond
                 break
         peg2 = False
         for cond in conds2:
-            if "POLYETHYLENE GLYCOL" in cond["chem"]:
+            if "POLYETHYLENE GLYCOL" in cond["chem"] and cond["units"] == "W/V":
                 peg2 = cond
                 break
         if peg1 and peg2:
