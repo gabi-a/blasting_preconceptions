@@ -1,8 +1,10 @@
 # CSIRO C3 : BLASTing away preconceptions in crystallisation trials
-!! What follows are __not__ clear instructions - they are my notes in case I need to go back to any step.
-!! Running the steps out of order will likely fail due to files missing which should have been generated
-!! in a previous step.
-!! The C6 code is not published, so it will not be possible to run that stage.
+
+### WARNING
+What follows are not always clear instructions - they are my notes in case I need to go back to any step.\
+Running the steps out of order will likely fail due to files missing which should have been generated\
+in a previous step.\
+The C6 code is not published, so it will not be possible to run that stage.
 
 Python 2 and Python 3 are required to execute every stage.
 numpy and matplotlib need to be installed (just install scipy).
