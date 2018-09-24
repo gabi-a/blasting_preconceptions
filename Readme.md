@@ -37,7 +37,7 @@ db\
    This generates `r280db.txt` which is a list of all R280 lines in the \
    format required by `parseFile.py`
 
-2. The next step is to parse the REMAKR 280 lines to extract chemical conditions.\
+2. The next step is to parse the REMARK 280 lines to extract chemical conditions.\
    `>cd Parse`\
    `>pipenv --python 2`\
    `>pipenv run python parseFile.py "../db/r280db.txt" > parsereport.txt` (~ 4 hours)\
