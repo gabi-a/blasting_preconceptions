@@ -6,10 +6,11 @@ Running the steps out of order will likely fail due to files missing which shoul
 in a previous step.\
 The C6 code is not published, so it will not be possible to run that stage.
 
-Python 2 and Python 3 are required to execute every stage.
-numpy and matplotlib need to be installed (just install scipy).
-This has been developed on windows, however everything *should* run on linux except C6 with out much modification.
-Some of the code takes a few hours - it is very easy to parallize if you want to run it on multiple cores however
+## Dependencies
+Python 2 and Python 3 are required to execute every stage.\
+numpy and matplotlib need to be installed (just install scipy).\
+This has been developed on windows, however everything *should* run on linux except C6 with out much modification.\
+Some of the code takes a few hours - it is very easy to parallize if you want to run it on multiple cores however\
 (in fact I did do this but it is too messy to publish).
 
 (1) PDB data can be downloaded via FTP from ftp://ftp.wwpdb.org/pub/pdb \
