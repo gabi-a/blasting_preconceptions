@@ -1,8 +1,18 @@
 # CSIRO C3 : BLASTing away preconceptions in crystallisation trials
+!! What follows are __not__ clear instructions - they are my notes in case I need to go back to any step.
+!! Running the steps out of order will likely fail due to files missing which should have been generated
+!! in a previous step.
+!! The C6 code is not published, so it will not be possible to run that stage.
+
 Python 2 and Python 3 are required to execute every stage.
+numpy and matplotlib need to be installed (just install scipy).
+This has been developed on windows, however everything *should* run on linux except C6 with out much modification.
+Some of the code takes a few hours - it is very easy to parallize if you want to run it on multiple cores however
+(in fact I did do this but it is too messy to publish).
 
 (1) PDB data can be downloaded via FTP from ftp://ftp.wwpdb.org/pub/pdb \
 (2) BLAST database and executables can be downloaded from https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download
+Check that blast is installed by running blastp in a terminal.
 
 ## Setup databases
 In the db folder, place:
@@ -27,7 +37,7 @@ db\
 2. The next step is to parse the REMAKR 280 lines to extract chemical conditions.\
    `>cd Parse`\
    `>pipenv --python 2`\
-   `>pipenv run python parseFile.py "../db/r280db.txt" > parsereport.txt`\
+   `>pipenv run python parseFile.py "../db/r280db.txt" > parsereport.txt` (~ 4 hours)\
    This generates a number of files in the Parse folder:
    * `parsereport.txt` has various reports on the parsed chemicals and quality of parsing
    * `output/cond_resolved_out.xml` lists each well and its conditions
@@ -44,14 +54,19 @@ db\
    * `nonempty_pdbcodes.pkl` is a list of all pdb codes with non empty chemical resevoirs
 
 ## Running BLAST
-At this step we generate a list of all pdb codes which
-* have non empty chemicals
-* were succesfully blasted
-as well as a dictionary containing numpy arrays with the fromat `{pdb code : blast results}`\
-`>python make_blast_dict.py`
+At this step we blast every structure in the PDB which has been parsed.
+`>python blast_all.py` (run overnight)
+This generates a CSV file for each structure in `db/blastout`.
+It also saves a list of all codes which could be blasted (i.e. their sequence was available) in 
+`db/nonempty_seq_pdbcodes.pkl`
 
 ## C6
+`>python make_pickle_files.py` to convert pickle3 files to pickle2\
+`>pipenv --python 2` to create a python 2 environment\
+`>pipenv install numpy` to install numpy to the pipenv environment\
+`>pipenv run python correlate_c6.py`
 
 ## PEGeq
 To calculate the PEGeq slope and intercept, and visualise it:\
-`>python pegeq.py`
+`>python pegeq.py`\
+This creates `db/pegeq.pkl` which stores the slope.

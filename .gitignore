@@ -4,3 +4,4 @@ db/*
 *.idea
 Parse/output/*
 C6/*
+blastp.exe

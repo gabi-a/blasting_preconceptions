@@ -15,4 +15,4 @@ for pdbcode in root:
         conds.append(child.attrib)
     chems_dict[pdbcode.attrib['code']] = conds
 
-pickle.dump(pdbcodes, open("db/chems_dict.pkl","wb"))
+pickle.dump(chems_dict, open("db/chems_dict.pkl","wb"))
