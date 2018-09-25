@@ -9,8 +9,20 @@ numcodes = len(pdbcodes)
 
 nh4results = []
 for i,pdbcode in enumerate(pdbcodes):
+    
     sys.stdout.flush()
     print(f"Progress: {i}/{numcodes}",end='\r')
+
+    conds1 = chemsdict[pdbcode]
+    
+    ammoniumSulfate1 = None
+    for cond in conds1:
+        if cond["chem"] == "AMMONIUM SULFATE" and cond["units"] == "M":
+            ammoniumSulfate1 = float(cond["conc"])
+            break
+
+    if not ammoniumSulfate1:
+        continue
 
     with open("db/blastout/"+pdbcode+".csv","rb") as csvfile:
         blastresult = np.genfromtxt(csvfile,dtype=None,delimiter=",")
@@ -21,28 +33,20 @@ for i,pdbcode in enumerate(pdbcodes):
     except:
         continue
 
-    conds1 = chemsdict[pdbcode]
-
     for seqid, seqident in zip(blastresult['f1'], blastresult['f2']):
         pdbcode2 = seqid[:4].decode("ascii").lower()
         if pdbcode2 not in pdbcodes:
             continue
         conds2 = chemsdict[pdbcode2]
 
-    ammoniumSulfate1 = None
-    for cond in conds1:
-        if cond["chem"] == "AMMONIUM SULFATE" and cond["units"] == "M":
-            ammoniumSulfate1 = float(cond["conc"])
-            break
-
-    ammoniumSulfate2 = None
-    for cond in conds2:
-        if cond["chem"] == "AMMONIUM SULFATE" and cond["units"] == "M":
-            ammoniumSulfate2 = float(cond["conc"])
-            break
+        ammoniumSulfate2 = None
+        for cond in conds2:
+            if cond["chem"] == "AMMONIUM SULFATE" and cond["units"] == "M":
+                ammoniumSulfate2 = float(cond["conc"])
+                break
             
-    if ammoniumSulfate1 and ammoniumSulfate2:
-        nh4results.append((np.abs(ammoniumSulfate1-ammoniumSulfate2), seqid))
+        if ammoniumSulfate2:
+            nh4results.append((np.abs(ammoniumSulfate1-ammoniumSulfate2), seqident))
         
 nh4results = np.asarray(nh4results)
-np.save("db/chem_results", nh4results)
+np.save("db/nh4_results", nh4results)

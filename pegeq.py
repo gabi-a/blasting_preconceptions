@@ -55,10 +55,12 @@ def main():
 
     plt.plot(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1), slope*np.log(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1))+intercept)
     
-    plt.figure()
     for i,weight in enumerate(np.unique(PEGdata[:,1])):
-        plt.subplot(5,5,i+1)
-        plt.hist(PEGdata[np.where(PEGdata[:,1] == weight), 0][0])
+        if len(np.where(PEGdata[:,1] == weight)[0]) > 10:
+            plt.subplot(5,5,i+1)
+            plt.hist(PEGdata[np.where(PEGdata[:,1] == weight), 0][0],bins=100)
+            plt.xlim((0,50))
+            plt.text(20,plt.ylim()[1]*(9/10),f"Mol. Weight = {int(weight):d}")
 
     plt.show()
 
