@@ -29,19 +29,25 @@ def main():
     means = []
     for i,weight in enumerate(np.unique(PEGdata[:,1])):
         concs = np.transpose(PEGdata[np.where(PEGdata[:,1]==weight),0])
-        std = np.std(concs)
-        mean = np.mean(concs)
+        if len(concs) > 10:
+            std = np.std(concs)
+            mean = np.mean(concs)
 
-        means.append((weight, mean, std, len(concs)))
-        print("Mol Weight = %8d\tConc: Mean = %f\tSTD = %f\tCount = %d"%(weight, mean, std, len(concs)))
+            means.append((weight, mean, std, len(concs)))
+            print("Mol Weight = %8d\tConc: Mean = %f\tSTD = %f\tCount = %d"%(weight, mean, std, len(concs)))
 
     means = np.asarray(means)
 
-    slope, intercept, r_value, p_value, std_err = stats.linregress(np.log(PEGdata[:,1]), PEGdata[:,0])
+    slope1, intercept1, r_value1, p_value1, std_err1 = stats.linregress(np.log(PEGdata[:,1]), PEGdata[:,0])
+    slope2, intercept2, r_value2, p_value2, std_err2 = stats.linregress(np.log(means[:,0]), means[:,1])
+    
+    # plt.text(6000, 38, f"y = {slope1:.3f}x+{intercept1:.3f}\n$r^2$ = {r_value1**2:.3f}\np = {p_value1:.3f}\nstd_err={std_err1:.3f}"\
+    #         f"\ny = {slope2:.3f}x+{intercept2:.3f}\n$r^2$ = {r_value2**2:.3f}\np = {p_value2:.3f}\nstd_err={std_err2:.3f}",bbox=dict(facecolor='none', edgecolor='black',pad=10))
+    print(f"r2 for fit through all points: {r_value1**2:.3f}")
+    print(f"r2 for fit through means: {r_value2**2:.3f}")
+    # plt.text(3500, 38, f"Fit through mean values:\ny = {slope2:.3f}x+{intercept2:.3f}\n$r^2$ = {r_value2**2:.3f}\np = {p_value2:.3f}\nstd_err={std_err2:.3f}",bbox=dict(facecolor='none', edgecolor='black',pad=10))
 
-    plt.text(6000, 38, f"y = {slope:.3f}x+{intercept:.3f}\n$r^2$ = {r_value**2:.3f}\np = {p_value:.3f}\nstd_err={std_err:.3f}",bbox=dict(facecolor='none', edgecolor='black',pad=10))
-
-    pickle.dump(slope, open("db/pegeq.pkl","wb"))
+    pickle.dump(slope2, open("db/pegeq.pkl","wb"))
 
     plt.scatter(means[:,0], means[:,1], color="r", zorder=1)
     max_count = np.max(means[:,3])
@@ -54,7 +60,7 @@ def main():
     ticks = np.array(np.sort(np.unique(PEGdata[:,1])),dtype=int)
     plt.xticks(ticks[::2],ticks[::2], rotation=45)
 
-    plt.plot(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1), slope*np.log(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1))+intercept)
+    plt.plot(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1), slope2*np.log(np.arange(np.min(means[:,0]), np.max(means[:,0]), 1))+intercept2)
     plt.tight_layout(pad=0.1, w_pad=0.01, h_pad=0.5)
     plt.savefig("images/pegeq",dpi=800)
     plt.figure()
