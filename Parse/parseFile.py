@@ -12,6 +12,7 @@ import csv
 import os
 import sys
 import random
+import pickle
 
 from CrystalParser import CRYSTAL_PARSER
 from CrystalParser_alia import non_chem_list
@@ -242,6 +243,7 @@ def doFile(fname):
     print xc.CODE_FAIL_LIST
     print xc.chem_alia
     
+    pickle.dump(xc.CHEM_UNKNOWN_DICT, open("unknown_chems.pkl","wb"))
     
 if __name__== "__main__":
     if len(sys.argv) > 1:

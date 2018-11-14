@@ -1,0 +1,1979 @@
+doFile( ../db/r280db.txt )
+SAMPLE_LIST= ['4p2a', '4i6u', '6c1k', '3k9z', '4r96', '2yjd', '3w5w', '5by0', '3co2', '5iks', '444d', '4hyr', '3f48', '4k7r', '3m8r', '5kww', '4eol', '3uba', '2ywk', '3it5', '3ot0', '3aj3', '5csb', '5umf', '1ea1', '5j0d', '4apj', '4ckv', '3p55', '8est', '3al2', '4hk2', '3hpq', '4nig', '1a71', '3u4v', '4v0c', '5mcd', '4h80', '4x3a', '5psf', '5k8t', '5k03', '4ffk', '5mv4', '3u03', '3tq8', '5iy0', '3ila', '6ci9', '5xcu', '4n5d', '3zed', '4l4e', '6bv4', '3c8s', '6fao', '3e67', '4njz', '3tdv', '3ine', '4i7u', '4n3y', '3wh5', '3tgt', '4ycq', '5tea', '4w6e', '5wav', '5wkh', '3q9k', '3bq9', '1erb', '6bfj', '3cem', '5ddh', '3nlo', '3gc8', '5jjb', '5vn2', '3azc', '4jdz', '3lgb', '3fp0', '5pxk', '4noj', '2y0t', '3x2y', '4h7d', '1f9b', '3qpe', '1gin', '6ex7', '3g7k', '4olp', '1d8g', '5szu', '5ws4', '3poy', '3dt0', '4jfo', '5x52', '4cxi', '3g27', '4w7v', '4g1f', '3e96', '6g1w', '4oyk', '5iop', '4xye', '4dr8', '5v0c', '4wyu', '4l2m', '3bqv', '4yz5', '4pkv', '4ddb', '6fkj', '3hqa', '4xmk', '4o0a', '3wpi', '3guc', '4jpo', '4c79', '5fcb', '4it0', '4fzq', '4mge', '1gn9', '1e99', '9rsa', '5gli', '4mmh', '3uv1', '4r3h', '3q7d', '4qn3', '3m3u', '5v45', '3dyd', '3e1j', '5fjp', '3b1e', '5u8v', '3qzz', '3pms', '4o56']
+Raw chemicals list:
+'HEPES' :  18 {Resolved chem: HEPES} ['1ea1', '3b1e', '3bq9', '3f48', '3fp0', '3tgt', '3tq8', '4c79', '4k7r', '4wyu', '4yz5', '5iy0', '5jjb', '5k8t', '5wav', '5wkh', '5xcu', '6bv4']
+'AMMONIUM SULFATE' :  17 {Resolved chem: AMMONIUM SULFATE} ['3bq9', '3e1j', '3fp0', '3p55', '3pms', '3u03', '4ffk', '4k7r', '4l2m', '4o56', '4x3a', '4yz5', '5iks', '5k03', '5xcu', '6ex7', '6fao']
+'SODIUM ACETATE' :  16 {Resolved chem: SODIUM ACETATE} ['3aj3', '3bqv', '3ine', '3m3u', '3pms', '3u03', '3w5w', '4apj', '4ddb', '4i6u', '4qn3', '4v0c', '4w7v', '5csb', '5v0c', '5vn2']
+'PEG 3350' :  15 {Resolved chem: POLYETHYLENE GLYCOL 3350} ['1e99', '2y0t', '3g27', '3gc8', '3ila', '3ine', '3tdv', '4h80', '4hyr', '4i6u', '4jfo', '4wyu', '5v45', '6ex7', '6fao']
+'MES' :  13 {Resolved chem: MES} ['1gn9', '3e67', '3hpq', '3hpq', '3nlo', '4jfo', '4noj', '4o0a', '4xye', '5mv4', '5pxk', '5v45', '6g1w']
+'NACL' :  12 {Resolved chem: SODIUM CHLORIDE} ['2y0t', '3f48', '3g7k', '3it5', '3m3u', '3ot0', '3poy', '3u4v', '3w5w', '4jfo', '4p2a', '5k03']
+'PEG 4000' :  12 {Resolved chem: POLYETHYLENE GLYCOL 4000} ['1ea1', '1gn9', '3aj3', '3pms', '4apj', '4l4e', '4nig', '5csb', '5ddh', '5iy0', '5v0c', '6ci9']
+'PEG3350' :  12 {Resolved chem: POLYETHYLENE GLYCOL 3350} ['3nlo', '4k7r', '4n3y', '4r3h', '4yz5', '5by0', '5j0d', '5psf', '5vn2', '5x52', '5xcu', '6bv4']
+'TRIS' :  10 {Resolved chem: TRIS} ['3qpe', '4ffk', '4i7u', '4l4e', '4mmh', '4n5d', '4oyk', '4x3a', '5szu', '6ci9']
+'BIS-TRIS' :  9 {Resolved chem: BIS-TRIS} ['3uv1', '4hyr', '4jpo', '4o56', '4pkv', '4r3h', '5by0', '5psf', '6ex7']
+'GLYCEROL' :  8 {Resolved chem: GLYCEROL} ['3azc', '3bq9', '3g7k', '3u03', '4w7v', '5csb', '5umf', '6fkj']
+'PEG 8000' :  8 {Resolved chem: POLYETHYLENE GLYCOL 8000} ['3b1e', '3bqv', '3m8r', '4ckv', '4o0a', '4w7v', '5jjb', '5wkh']
+'MPD' :  7 {Resolved chem: 2-METHYL-2,4-PENTANEDIOL} ['3dyd', '3ot0', '4fzq', '4ycq', '5k8t', '5tea', '6bfj']
+'MGCL2' :  6 {Resolved chem: MAGNESIUM CHLORIDE} ['1e99', '3w5w', '5by0', '5j0d', '6ci9', '6fkj']
+'SODIUM CITRATE' :  6 {Resolved chem: SODIUM CITRATE} ['3guc', '4njz', '4p2a', '5mcd', '5ws4', '6bfj']
+'SODIUM CHLORIDE' :  6 {Resolved chem: SODIUM CHLORIDE} ['3hqa', '3ila', '3u03', '4ddb', '4mge', '4nig']
+'LITHIUM SULFATE' :  6 {Resolved chem: LITHIUM SULFATE} ['3e67', '3u03', '4x3a', '5ddh', '5kww', '6bv4']
+'AMMONIUM ACETATE' :  6 {Resolved chem: AMMONIUM ACETATE} ['3aj3', '3b1e', '3m8r', '3nlo', '5csb', '5v45']
+'CACL2' :  5 {Resolved chem: CALCIUM CHLORIDE} ['3g27', '4v0c', '5mv4', '5tea', '6fkj']
+'SODIUM CACODYLATE' :  5 {Resolved chem: SODIUM CACODYLATE} ['3bqv', '3m8r', '3ot0', '4njz', '4w7v']
+'PEG 6000' :  5 {Resolved chem: POLYETHYLENE GLYCOL 6000} ['3tq8', '4c79', '4oyk', '5k8t', '5mv4']
+'AMMONIUM SULPHATE' :  4 {Resolved chem: AMMONIUM SULFATE} ['3guc', '4i7u', '4r3h', '5mcd']
+'MAGNESIUM ACETATE' :  4 {Resolved chem: MAGNESIUM ACETATE} ['3m8r', '4n3y', '4pkv', '5jjb']
+'EDTA' :  4 {Resolved chem: EDTA} ['3cem', '3hpq', '3poy', '5iks']
+'BISTRIS' :  3 {Resolved chem: BIS-TRIS} ['3ila', '5j0d', '6fao']
+'PROTEIN' :  3 {Non chem: 'PROTEIN} ['4mge', '5fjp', '5vn2']
+'2-PROPANOL' :  3 {Resolved chem: 2-PROPANOL} ['3azc', '4jdz', '4njz']
+'ISOPROPANOL' :  3 {Resolved chem: 2-PROPANOL} ['1ea1', '4l2m', '4yz5']
+'TRIS CHLORIDE' :  3 {Resolved chem: TRIS CHLORIDE} ['3g7k', '3it5', '5ddh']
+'CALCIUM ACETATE' :  3 {Resolved chem: CALCIUM ACETATE} ['4mmh', '4o0a', '4qn3']
+'TRIS-HCL' :  3 {Resolved chem: TRIS CHLORIDE} ['1f9b', '5iks', '5k03']
+'SODIUM FORMATE' :  3 {Resolved chem: SODIUM FORMATE} ['4jpo', '4mge', '5fjp']
+'PEG 400' :  2 {Resolved chem: POLYETHYLENE GLYCOL 400} ['1a71', '3tgt']
+'POTASSIUM PHOSPHATE' :  2 {Resolved chem: POTASSIUM PHOSPHATE} ['4mge', '5x52']
+'MES/IMIDAZOLE' :  2 {Resolved chem: MES-IMIDAZOLE} ['5umf', '6fkj']
+'MAGNESIUM CHLORIDE' :  2 {Resolved chem: MAGNESIUM CHLORIDE} ['3qpe', '4nig']
+'ETHYLENE GLYCOL' :  2 {Resolved chem: ETHYLENE GLYCOL} ['3m3u', '5wav']
+'PEG 20000' :  2 {Resolved chem: POLYETHYLENE GLYCOL 20000} ['3poy', '5pxk']
+'PEG 3000' :  2 {Resolved chem: POLYETHYLENE GLYCOL 3000} ['3azc', '4mmh']
+'DTT' :  2 {Resolved chem: DITHIOTHREITOL} ['3cem', '6bfj']
+'BME' :  2 {Resolved chem: BETA-MERCAPTOETHANOL} ['3c8s', '3c8s']
+'PEG 2000 MME' :  2 {Resolved chem: POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000} ['4dr8', '4xye']
+'SODIUM HEPES' :  2 {Resolved chem: SODIUM HEPES} ['4jdz', '5ws4']
+'POTASSIUM CHLORIDE' :  2 {Resolved chem: POTASSIUM CHLORIDE} ['4l4e', '5v0c']
+'CALCIUM CHLORIDE' :  2 {Resolved chem: CALCIUM CHLORIDE} ['4jdz', '4jpo']
+'PEG 1500' :  2 {Resolved chem: POLYETHYLENE GLYCOL 1500} ['3g7k', '3tgt']
+'PEG 4K' :  2 {Resolved chem: POLYETHYLENE GLYCOL 4000} ['5fjp', '6fkj']
+'TRIS HCL' :  2 {Resolved chem: TRIS CHLORIDE} ['1e99', '5fjp']
+'HEPES/NAOH' :  2 {Resolved chem: HEPES} ['4ckv', '4ckv']
+'CITRIC ACID' :  2 {Resolved chem: CITRIC ACID} ['4hk2', '5iop']
+'BICINE' :  2 {Resolved chem: BICINE} ['3poy', '4g1f']
+'CHES' :  1 {Resolved chem: CHES} ['5kww']
+'NAD' :  1 {Resolved chem: NICOTINAMIDE ADENINE DINUCLEOTIDE} ['5vn2']
+'NA/K PHOSPHATE' :  1 {Resolved chem: POTASSIUM SODIUM PHOSPHATE} ['3c8s']
+'NA-HEPES' :  1 {Resolved chem: SODIUM HEPES} ['3azc']
+'SODIUM PHOSPHATE DIBASIC' :  1 {Resolved chem: DISODIUM HYDROGEN PHOSPHATE} ['5iop']
+'GSH' :  1 {Resolved chem: GLUTATHIONE, REDUCED} ['3nlo']
+'LITHIUM NITRATE' :  1 {Resolved chem: LITHIUM NITRATE} ['3tdv']
+'LITHIUM SULPHATE' :  1 {Resolved chem: LITHIUM SULFATE} ['3guc']
+'SODIUM MES' :  1 {Resolved chem: SODIUM MES} ['3p55']
+'MPDMPD' :  1 {Unknown chem} ['3x2y']
+'PEG 8K' :  1 {Resolved chem: POLYETHYLENE GLYCOL 8000} ['4pkv']
+'KBR' :  1 {Resolved chem: POTASSIUM BROMIDE} ['4dr8']
+'SUCROSE' :  1 {Resolved chem: SUCROSE} ['4it0']
+'NA MALONATE' :  1 {Resolved chem: SODIUM MALONATE} ['4r96']
+'2-METHANE-2,4-PENTANEDIOL MPD' :  1 {Unknown chem} ['3ot0']
+'SODIUM AZIDE' :  1 {Resolved chem: SODIUM AZIDE} ['6bfj']
+'LI2SO4' :  1 {Resolved chem: LITHIUM SULFATE} ['3wh5']
+'CACODYLATE' :  1 {Resolved chem: SODIUM CACODYLATE} ['4nig']
+'B3' :  1 {Unknown chem} ['5umf']
+'AMMONIUM PHOSPHATE MONOBASIC' :  1 {Resolved chem: AMMONIUM DIHYDROGEN PHOSPHATE} ['4n5d']
+'CTAB' :  1 {Resolved chem: CTAB} ['3gc8']
+'ALDH3A1' :  1 {Unknown chem} ['4h80']
+'D-CAMPHOR' :  1 {Resolved chem: D-CAMPHOR} ['4l4e']
+'LAXAPHYCINE' :  1 {Unknown chem} ['4ckv']
+'K/NA TARTRATE' :  1 {Resolved chem: POTASSIUM SODIUM TARTRATE} ['3wh5']
+'TRISODIUM CITRATE' :  1 {Resolved chem: TRISODIUM CITRATE} ['3e1j']
+"3'-PHOSPHOGUANOSINE 5' PHOSPHATE" :  1 {Unknown chem} ['3w5w']
+'AMMONIUM FLUORIDE' :  1 {Resolved chem: AMMONIUM FLUORIDE} ['3gc8']
+'NAOAC' :  1 {Resolved chem: SODIUM ACETATE} ['5tea']
+'POTASSIUM FLUORIDE' :  1 {Resolved chem: POTASSIUM FLUORIDE} ['3zed']
+'PEG MME 550' :  1 {Resolved chem: POLYETHYLENE GLYCOL MONOMETHYL ETHER 550} ['3f48']
+'TRISHCL' :  1 {Resolved chem: TRIS CHLORIDE} ['3lgb']
+'PEG MME 200' :  1 {Resolved chem: POLYETHYLENE GLYCOL MONOMETHYLETHER 2000} ['4g1f']
+'ZN ACETATE' :  1 {Resolved chem: ZINC ACETATE} ['3lgb']
+'DI-POTASSIUM HYDROGEN PHOSPHATE' :  1 {Unknown chem} ['2ywk']
+'POLYETHYLENE GLYCOL 3350' :  1 {Resolved chem: POLYETHYLENE GLYCOL 3350} ['3zed']
+'ZINC CHLORIDE' :  1 {Resolved chem: ZINC CHLORIDE} ['4c79']
+'SODIUM CHES' :  1 {Resolved chem: CHES} ['3wh5']
+'CAPS' :  1 {Resolved chem: CAPS} ['4ycq']
+'DDM' :  1 {Resolved chem: N-DODECYL-B-D-MALTOSIDE} ['4ckv']
+'SODIUM PHOSPHATE' :  1 {Resolved chem: SODIUM PHOSPHATE} ['4mge']
+'ETHYLEN GLYCOL' :  1 {Resolved chem: ETHYLENE GLYCOL} ['5wkh']
+'VEGFR-1-D2' :  1 {Unknown chem} ['4ckv']
+'NA-ACETATE' :  1 {Resolved chem: SODIUM ACETATE} ['3dyd']
+'KCL' :  1 {Resolved chem: POTASSIUM CHLORIDE} ['3ot0']
+'FAROPENUM' :  1 {Unknown chem} ['6ex7']
+'MOPS' :  1 {Resolved chem: MOPS} ['2y0t']
+'SODIUM PHOSPHATE MONOBASIC' :  1 {Resolved chem: SODIUM DIHYDROGEN PHOSPHATE} ['5iop']
+'POTASSIUM/SODIUM TARTRATE' :  1 {Resolved chem: POTASSIUM SODIUM TARTRATE} ['5kww']
+'ETHANOL' :  1 {Resolved chem: ETHANOL} ['3lgb']
+'PEG-4000' :  1 {Resolved chem: POLYETHYLENE GLYCOL 4000} ['5umf']
+'POLYETHYLENE GLYCOL 8000' :  1 {Resolved chem: POLYETHYLENE GLYCOL 8000} ['5wav']
+'PEG' :  1 {Non chem: 'PEG} ['6bfj']
+'TRIS CHLORIDE B7' :  1 {Unknown chem} ['4mge']
+'SODIUM DIHYDROGEN PHOSPHATE' :  1 {Resolved chem: SODIUM DIHYDROGEN PHOSPHATE} ['2ywk']
+'ZINC SULFATE' :  1 {Resolved chem: ZINC SULFATE} ['4noj']
+'POLYETHYLENE GLYCOL 4000' :  1 {Resolved chem: POLYETHYLENE GLYCOL 4000} ['4qn3']
+'CDCL2' :  1 {Resolved chem: CADMIUM CHLORIDE} ['6ex7']
+'NBG' :  1 {Unknown chem} ['3cem']
+'TRI-AMMONIUM CITRATE' :  1 {Resolved chem: TRIAMMONIUM CITRATE} ['3e96']
+'DNA' :  1 {Non chem: 'DNA} ['3ot0']
+'AMSO4' :  1 {Resolved chem: AMMONIUM SULFATE} ['4hk2']
+'PLP' :  1 {Resolved chem: PYRIDOXAL-5-PHOSPHATE} ['3dyd']
+'KI' :  1 {Resolved chem: POTASSIUM IODIDE} ['4wyu']
+'SODIUM/POTASSIUM PHOSPHATE' :  1 {Resolved chem: POTASSIUM SODIUM PHOSPHATE} ['4olp']
+'ETHYLENE GLYCOL: UNIQUE PUCK ID: JIF2-4' :  1 {Unknown chem} ['5vn2']
+'MAGNESIUM CHLORIDE RESERVIORE' :  1 {Unknown chem} ['3ot0']
+'ZNSO4' :  1 {Resolved chem: ZINC SULFATE} ['4apj']
+'PEG 2000' :  1 {Resolved chem: POLYETHYLENE GLYCOL 2000} ['3hpq']
+'BES' :  1 {Resolved chem: BES} ['3cem']
+'LICL' :  1 {Resolved chem: LITHIUM CHLORIDE} ['4oyk']
+'B-OCTYL-GLUCODISE' :  1 {Unknown chem} ['3e67']
+'AMMONIUM PHOSPHATE' :  1 {Resolved chem: AMMONIUM PHOSPHATE} ['5szu']
+'POTASSIUM ACETATE' :  1 {Resolved chem: POTASSIUM ACETATE} ['4h80']
+'AVD AVE9423' :  1 {Unknown chem} ['3cem']
+'ACETATE' :  1 {Resolved chem: SODIUM ACETATE} ['4fzq']
+'A4' :  1 {Unknown chem} ['5tea']
+'PEG 200' :  1 {Resolved chem: POLYETHYLENE GLYCOL 200} ['6g1w']
+'PEG MME 2000' :  1 {Resolved chem: POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000} ['3uv1']
+'2-METHYL-2,4-PENTANEDIOL' :  1 {Resolved chem: 2-METHYL-2,4-PENTANEDIOL} ['4olp']
+'ETHANOL DOPA' :  1 {Unknown chem} ['1f9b']
+'SODIUM SULPHATE' :  1 {Resolved chem: SODIUM SULFATE} ['4i6u']
+'AK' :  1 {Unknown chem} ['3hpq']
+'POTASSIUM PHOSPHATE DIBASIC' :  1 {Resolved chem: DIPOTASSIUM HYDROGEN PHOSPHATE} ['5iop']
+'BIS TRIS PROPANE' :  1 {Resolved chem: BIS-TRIS PROPANE} ['4i6u']
+'NBSD-256' :  1 {Unknown chem} ['4fzq']
+'SDS' :  1 {Resolved chem: SODIUM DODECYL SULFATE} ['3nlo']
+'TFE' :  1 {Resolved chem: 2,2,2-TRIFLUOROETHANOL} ['1a71']
+'POTASSIUM THIOCYANATE' :  1 {Resolved chem: POTASSIUM THIOCYANATE} ['4v0c']
+'PEG 500' :  1 {Unknown chem} ['4noj']
+'SPERMINE' :  1 {Resolved chem: SPERMINE} ['3ot0']
+'SODIUM FLUORIDE' :  1 {Resolved chem: SODIUM FLUORIDE} ['5umf']
+Checking xml alias file: True
+
+--> By PDB code
+total number of pdb codes:   150
+% passed:      83.33 %
+% empty:      16.67 %
+% failed:      0.00 %
+
+failed code list:  []
+
+--> By chem species count:
+Number of chemicals: 143
+Unknown:  20 / 143
+Known:  120 / 143
+Non-chem:  3 / 143
+
+--> By chem count:
+Unknown/Total:  20 / 368
+% Known: 93.21 %
+% Unknown: 5.43 %
+% Non-chem: 1.36 %
+
+--> Conversion Quality Report:
+PDB:  3u03  #parts passed/#total:  5 / 6
+   Reservoir:
+      0: 1.3000 M AMMONIUM SULFATE
+      1: 0.2000 M LITHIUM SULFATE
+      2: 0.0500 M SODIUM CHLORIDE
+      3: 0.1000 M SODIUM ACETATE pH 4.5
+      4: 15.0000 V/V GLYCEROL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: HOSAA.18070.A AT 10 MG/ML. 1.3M          
+  AMMONIUM SULFATE, 0.2M LITHIUM SULFATE, 50MM SODIUM CHLORIDE,       
+  0.1M SODIUM ACETATE, PH 4.5. CRYOPROTECTION 15% GLYCEROL., VAPOR    
+  DIFFUSION, HANGING DROP, TEMPERATURE 289K                           
+
+
+
+cnt_tp= 1.0
+sum_tp= 0.8333333333333334
+PDB:  5v0c  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M SODIUM ACETATE pH 7.0
+      1: 0.0100 M POTASSIUM CHLORIDE
+      2: 2.0000 W/V POLYETHYLENE GLYCOL 4000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM SODIUM ACETATE, PH 7.0, 10 MM     
+  POTASSIUM CHLORIDE, 2-4% PEG4000, VAPOR DIFFUSION, SITTING DROP,    
+  TEMPERATURE 290K                                                    
+
+
+
+cnt_tp= 2.0
+sum_tp= 1.8333333333333335
+PDB:  4p2a  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 4.0000 M SODIUM CHLORIDE
+      1: 0.1000 M SODIUM CITRATE pH 6.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 4 M NACL, 0.1 M NA CITRATE PH 6.0        
+
+
+
+cnt_tp= 3.0
+sum_tp= 2.8333333333333335
+PDB:  5tea  #parts passed/#total:  3 / 4
+   Reservoir:
+      0: 0.2000 M CALCIUM CHLORIDE
+      1: 0.1000 M SODIUM ACETATE pH 4.6
+      2: 30.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: NEGOA.01623.A.B1.PS37944 AT 32.6 MG/ML   
+  AGAINST JCSG A4, 0.2M CACL2, 0.1 M NAOAC PH 4.6, 30% MPD, VAPOR     
+  DIFFUSION, SITTING DROP, TEMPERATURE 289K                           
+
+
+
+cnt_tp= 4.0
+sum_tp= 3.5833333333333335
+PDB:  3x2y  #parts passed/#total:  0 / 1
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 51% (W/V) 2-METHYL-2,4-                  
+  PENTANEDIOL(MPD), PH 9.2, VAPOR DIFFUSION, SITTING DROP,            
+  TEMPERATURE 295K                                                    
+
+
+
+cnt_tp= 5.0
+sum_tp= 3.5833333333333335
+PDB:  5mv4  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 6000
+      1: 0.1000 M MES pH 6.0
+      2: 0.2000 M CALCIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% (W/V) PEG 6000, 0.1 M MES PH 6.0,    
+  0.2 M CACL2, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293K        
+
+
+
+cnt_tp= 6.0
+sum_tp= 4.583333333333334
+PDB:  3ila  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 15.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M SODIUM CHLORIDE
+      2: 0.1000 M BIS-TRIS pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 15-25% PEG 3350, 0.2M SODIUM CHLORIDE,   
+  0.1M BISTRIS, PH 7.0, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE    
+  295K                                                                
+
+
+
+cnt_tp= 7.0
+sum_tp= 5.583333333333334
+PDB:  4n3y  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1500 M MAGNESIUM ACETATE
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.15M MGAC2, 20% PEG3350, VAPOR          
+  DIFFUSION, HANGING DROP, TEMPERATURE 289K                           
+
+
+
+cnt_tp= 8.0
+sum_tp= 6.583333333333334
+PDB:  5ddh  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.1000 M TRIS CHLORIDE pH 8.0
+      2: 0.2000 M LITHIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% PEG 4000, 0.1M TRIS-HCL 8.0, 0.2M    
+  LITHIUM SULFATE, PH 8.0, VAPOR DIFFUSION, SITTING DROP,             
+  TEMPERATURE 293.15K                                                 
+
+
+
+cnt_tp= 9.0
+sum_tp= 7.583333333333334
+PDB:  3wh5  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 1.2000 M POTASSIUM SODIUM TARTRATE
+      1: 0.1000 M CHES pH 8.5
+      2: 0.2000 M LITHIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.2M K/NA TARTRATE, 0.1M NA-CHES, 0.2M   
+  LI2SO4, PH 8.5, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293.0K   
+
+
+
+cnt_tp= 10.0
+sum_tp= 8.583333333333334
+PDB:  3m8r  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 0.2000 M AMMONIUM ACETATE
+      2: 0.0200 M MAGNESIUM ACETATE
+      3: 0.0500 M SODIUM CACODYLATE pH 6.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% (W/V) PEG 8000, 0.2M AMMONIUM        
+  ACETATE, 0.02M MAGNESIUM ACETATE, 0.05M SODIUM CACODYLATE, PH       
+  6.5, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 291K                
+
+
+
+cnt_tp= 11.0
+sum_tp= 9.583333333333334
+PDB:  5umf  #parts passed/#total:  4 / 5
+   Reservoir:
+      0: 10.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 20.0000 V/V GLYCEROL
+      2: 0.1000 M MES-IMIDAZOLE pH 6.5
+      3: 0.0300 M SODIUM FLUORIDE pH 8.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: NEGOA.18161.A.B1.PS38017 AT 26.22        
+  MG/ML MIXED 1:1 WITH AN EQUAL VOLUME MORPHEUS (B3): 10% (W/V)       
+  PEG-4000, 20% (V/V) GLYCEROL, 0.1 M MES/IMIDAZOLE, PH=6.5, 0.03     
+  M EACH SODIUM FLUORIDE, SODIUM BROMIDE, SODIUM IODIDE, PH 8.5,      
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 290K                     
+
+
+
+cnt_tp= 12.0
+sum_tp= 10.383333333333335
+PDB:  6bfj  #parts passed/#total:  4 / 7
+   Reservoir:
+      0: 0.1000 M SODIUM CITRATE pH 4.9
+      1: 0.0100 M DITHIOTHREITOL
+      2: 0.0030 M SODIUM AZIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: CRYSTALS WERE OBTAINED AT 18 C BY THE    
+  HANGING DROP VAPOR DIFFUSION METHOD USING 4 ML DROPS THAT           
+  CONTAINED EQUAL VOLUMES OF PROTEIN AND RESERVOIR SOLUTIONS OVER     
+  A 0.5 ML SOLUTION OF 100 MM SODIUM CITRATE, PH 4.9-5.2, 8-18 %      
+  PEG 6000 (W/V), 10 MM DTT, AND 3 MM NAN3. CRYSTALS APPEARED         
+  WITHIN 3-5 DAYS AND WERE BRIEFLY IMMERSED IN A CRYOGENIC            
+  SOLUTION CONTAINING 10% MPD (2-METHYLPENTANE-2,4-DIOL) AND 90%      
+  RESERVOIR SOLUTION., VAPOR DIFFUSION, HANGING DROP, TEMPERATURE     
+  291K                                                                
+
+
+
+cnt_tp= 13.0
+sum_tp= 10.954761904761906
+PDB:  3it5  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.0500 M TRIS CHLORIDE
+      1: 0.1000 M SODIUM CHLORIDE pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 50MM TRISCL 100MM NACL, PH 7.0,          
+  SPONTANEOUS CRYSTALLIZATION, TEMPERATURE 277K                       
+
+
+
+cnt_tp= 14.0
+sum_tp= 11.954761904761906
+PDB:  4nig  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.1000 M SODIUM CHLORIDE
+      2: 0.0500 M MAGNESIUM CHLORIDE
+      3: 0.1000 M SODIUM CACODYLATE pH 6.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% PEG4000, 0.1 M SODIUM CHLORIDE,      
+  0.05 M MAGNESIUM CHLORIDE, 0.1 M CACODYLATE, PH 6.5, VAPOR          
+  DIFFUSION, HANGING DROP, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 15.0
+sum_tp= 12.954761904761906
+PDB:  3b1e  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 22.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 0.1000 M HEPES pH 7.5
+      2: 0.0800 M AMMONIUM ACETATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 22% PEG 8000, 0.1M HEPES PH7.5, 0.08M    
+  AMMONIUM ACETATE, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K   
+
+
+
+cnt_tp= 16.0
+sum_tp= 13.954761904761906
+PDB:  5v45  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M MES pH 6.5
+      1: 28.0000 W/V POLYETHYLENE GLYCOL 3350
+      2: 0.2000 M AMMONIUM ACETATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M MES PH 6.5, 28% PEG 3350, 0.2 M    
+  AMMONIUM ACETATE, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K   
+
+
+
+cnt_tp= 17.0
+sum_tp= 14.954761904761906
+PDB:  1e99  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.0500 M MAGNESIUM CHLORIDE
+      1: 21.0000 W/V POLYETHYLENE GLYCOL 3350
+      2: 0.1000 M TRIS CHLORIDE pH 8.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: VAPOR DIFFUSION AT 293 K MIXING          
+  2 MICROLITERS OF A SOLUTION CONTAINING THE ENZYME,                  
+  NUCLEOTIDES, AND 50 MM MGCL2 WITH 2 MICROLITERS OF A                
+  SOLUTION CONTAINING 21% PEG 3350, 100 MM TRIS HCL PH 8.0            
+  AND 50 MICROLITERS OF DEAD SEA WATER.                               
+
+
+
+cnt_tp= 18.0
+sum_tp= 15.954761904761906
+PDB:  5k03  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M TRIS CHLORIDE pH 7.0
+      1: 1.8000 M AMMONIUM SULFATE
+      2: 0.2000 M SODIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M TRIS-HCL PH 7, 1.8 M AMMONIUM      
+  SULFATE, 0.2 M NACL, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE     
+  295K                                                                
+
+
+
+cnt_tp= 19.0
+sum_tp= 16.954761904761906
+PDB:  5x52  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 32.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.0500 M POTASSIUM PHOSPHATE pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 32% PEG3350, 50 MM POTTASIUM PHOSPHATE   
+  BUFFER, PH 7.0, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 277K     
+
+
+
+cnt_tp= 20.0
+sum_tp= 17.954761904761906
+PDB:  5jjb  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 22.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 0.1000 M MAGNESIUM ACETATE
+      2: 0.1000 M HEPES pH 6.6
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 22-23% PEG 8000, 0.1M MAGNESIUM          
+  ACETATE TETRAHYDRATE, 0.1M HEPES PH 6.6, VAPOR DIFFUSION,           
+  HANGING DROP, TEMPERATURE 293K                                      
+
+
+
+cnt_tp= 21.0
+sum_tp= 18.954761904761906
+PDB:  4mge  #parts passed/#total:  5 / 6
+   Reservoir:
+      0: 0.2500 M SODIUM CHLORIDE
+      1: 0.0560 M SODIUM PHOSPHATE
+      2: 1.3440 M POTASSIUM PHOSPHATE
+      3: 4.0000 M SODIUM FORMATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: PROTEIN: 7.5 MG/ML, 0.25 M SODIUM        
+  CHLORIDE, 0.01 M TRIS-HCL BUFFER PH 8.3; SCREEN: CLASSICS II (B7)   
+  , 0.056 M SODIUM PHOSPHATE, 1.344 M POTASIUM PHOSPHATE; CRYO:       
+  4.0 M SODIUM FORMATE., VAPOR DIFFUSION, SITTING DROP,               
+  TEMPERATURE 295K                                                    
+
+
+
+cnt_tp= 22.0
+sum_tp= 19.788095238095238
+PDB:  6g1w  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 30.0000 V/V POLYETHYLENE GLYCOL 200
+      1: 0.0500 M MES pH 6.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% PEG 200/50 MM MES PH 6.0, VAPOR      
+  DIFFUSION, HANGING DROP, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 23.0
+sum_tp= 20.788095238095238
+PDB:  4qn3  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M CALCIUM ACETATE pH 4.5
+      1: 0.1000 M SODIUM ACETATE
+      2: 10.0000 W/V POLYETHYLENE GLYCOL 4000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M CALCIUM ACETATE, 0.1M SODIUM        
+  ACETATE, 10%(W/V) POLYETHYLENE GLYCOL 4000, PH 4.5, EVAPORATION,    
+  TEMPERATURE 291K                                                    
+
+
+
+cnt_tp= 24.0
+sum_tp= 21.788095238095238
+PDB:  4l2m  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 1.0000 V/V 2-PROPANOL
+      1: 2.0000 M AMMONIUM SULFATE pH 5.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1% V/V ISOPROPANOL, 2 M AMMONIUM         
+  SULFATE, PH 5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 277K      
+
+
+
+cnt_tp= 25.0
+sum_tp= 22.788095238095238
+PDB:  5iop  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1000 M CITRIC ACID
+      1: 0.1000 M DISODIUM HYDROGEN PHOSPHATE
+      2: 0.4000 M DIPOTASSIUM HYDROGEN PHOSPHATE
+      3: 1.6000 M SODIUM DIHYDROGEN PHOSPHATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M CITRIC ACID, 0.1 M SODIUM          
+  PHOSPHATE DIBASIC, 0.4 M POTASSIUM PHOSPHATE DIBASIC, 1.6 M         
+  SODIUM PHOSPHATE MONOBASIC, VAPOR DIFFUSION, HANGING DROP,          
+  TEMPERATURE 293K                                                    
+
+
+
+cnt_tp= 26.0
+sum_tp= 23.788095238095238
+PDB:  1f9b  #parts passed/#total:  1 / 3
+   Reservoir:
+      0: 0.0200 M TRIS CHLORIDE pH 5.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20MM TRIS-HCL, PH 5.0 CONCENTRATION 50   
+  MG/ML 10% ETHANOL SOAKED FOR 12HOURS IN BUFFER CONTAINING DOPA,     
+  MICRODIALYSIS, TEMPERATURE 4K, TEMPERATURE 277.0K                   
+
+
+
+cnt_tp= 27.0
+sum_tp= 24.12142857142857
+PDB:  3e96  #parts passed/#total:  1 / 1
+   Reservoir:
+      0: 1.8000 M TRIAMMONIUM CITRATE pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.8 M TRI-AMMONIUM CITRATE, , PH 7.0,    
+  VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293.0K                   
+
+
+
+cnt_tp= 28.0
+sum_tp= 25.12142857142857
+PDB:  5psf  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M BIS-TRIS pH 7.0
+      1: 30.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M BIS-TRIS PH 7.0 -- 30% PEG3350,     
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293K                     
+
+
+
+cnt_tp= 29.0
+sum_tp= 26.12142857142857
+PDB:  3tdv  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.2000 M LITHIUM NITRATE
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2 M LITHIUM NITRATE, 20% PEG 3350,     
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K                     
+
+
+
+cnt_tp= 30.0
+sum_tp= 27.12142857142857
+PDB:  4o0a  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M MES pH 6.5
+      1: 0.2000 M CALCIUM ACETATE
+      2: 20.0000 W/V POLYETHYLENE GLYCOL 8000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM MES, 200 MM CALCIUM ACETATE,      
+  20% PEG 8000, PH 6.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE    
+  294K                                                                
+
+
+
+cnt_tp= 31.0
+sum_tp= 28.12142857142857
+PDB:  4jfo  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.0250 M MES pH 6.5
+      1: 24.0000 W/V POLYETHYLENE GLYCOL 3350
+      2: 0.0100 M SODIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 25 MM MES, 24% PEG 3350, 10 MM NACL,     
+  PH 6.5, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 291K             
+
+
+
+cnt_tp= 32.0
+sum_tp= 29.12142857142857
+PDB:  4olp  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M POTASSIUM SODIUM PHOSPHATE
+      1: 30.0000 V/V 2-METHYL-2,4-PENTANEDIOL pH 6.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M SODIUM/POTASSIUM PHOSPHATE, 30%     
+  2-METHYL-2,4-PENTANEDIOL, PH 6.0, VAPOR DIFFUSION, HANGING DROP,    
+  TEMPERATURE 296K                                                    
+
+
+
+cnt_tp= 33.0
+sum_tp= 30.12142857142857
+PDB:  4ffk  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M TRIS
+      1: 2.0000 M AMMONIUM SULFATE pH 8.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M TRIS, 2.0 M AMMONIUM SULFATE, PH   
+  8.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 285K                
+
+
+
+cnt_tp= 34.0
+sum_tp= 31.12142857142857
+PDB:  2ywk  #parts passed/#total:  1 / 2
+   Reservoir:
+      0: 1.2600 M SODIUM DIHYDROGEN PHOSPHATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.26M SODIUM DIHYDROGEN PHOSPHATE,       
+  0.14M DI-POTASSIUM HYDROGEN PHOSPHATE, PH 5.0, VAPOR DIFFUSION,     
+  SITTING DROP, TEMPERATURE 293K                                      
+
+
+
+cnt_tp= 35.0
+sum_tp= 31.62142857142857
+PDB:  3hqa  #parts passed/#total:  1 / 1
+   Reservoir:
+      0: 2.4000 M SODIUM CHLORIDE pH 4.8
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2.4 M SODIUM CHLORIDE, PH 4.8, VAPOR     
+  DIFFUSION, HANGING DROP, TEMPERATURE 298K                           
+
+
+
+cnt_tp= 36.0
+sum_tp= 32.62142857142857
+PDB:  4noj  #parts passed/#total:  2 / 3
+   Reservoir:
+      0: 0.0100 M ZINC SULFATE
+      1: 0.1000 M MES pH 6.7
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.01 M ZINC SULFATE, 0.1 M MES, PH       
+  6.7, AND 23% PEG 500, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE    
+  298K                                                                
+
+
+
+cnt_tp= 37.0
+sum_tp= 33.28809523809523
+PDB:  2y0t  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.0200 M MOPS
+      1: 0.1000 M SODIUM CHLORIDE
+      2: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20 MM MOPS, 100 MM NACL, 20% PEG 3350.   
+
+
+
+cnt_tp= 38.0
+sum_tp= 34.28809523809523
+PDB:  3w5w  #parts passed/#total:  3 / 4
+   Reservoir:
+      0: 0.1000 M SODIUM ACETATE pH 5.2
+      1: 1.6000 M SODIUM CHLORIDE
+      2: 0.0050 M MAGNESIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M SODIUM ACETATE TRIHYDRATE (PH       
+  5.2), 1.6M NACL, 5MM MGCL2, 10MM 3'-PHOSPHOGUANOSINE 5' PHOPHATE,   
+  VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K                     
+
+
+
+cnt_tp= 39.0
+sum_tp= 35.03809523809523
+PDB:  6bv4  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 18.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M LITHIUM SULFATE
+      2: 0.1000 M HEPES pH 7.2
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 18% PEG3350, 200 MM LITHIUM SULFATE,     
+  100 MM HEPES, PH 7.2, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE    
+  277K                                                                
+
+
+
+cnt_tp= 40.0
+sum_tp= 36.03809523809523
+PDB:  5wkh  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 17.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 2.0000 V/V ETHYLENE GLYCOL
+      2: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 17%PEG8000, 2% ETHYLEN GLYCOL, 0.1M      
+  HEPES PH7.5, VAPOR DIFFUSION, TEMPERATURE 277K                      
+
+
+
+cnt_tp= 41.0
+sum_tp= 37.03809523809523
+PDB:  4mmh  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 3000
+      1: 0.1000 M TRIS
+      2: 0.2000 M CALCIUM ACETATE pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% PEG3000, 0.1M TRIS, 0.2M CALCIUM     
+  ACETATE, PH 7.0, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K    
+
+
+
+cnt_tp= 42.0
+sum_tp= 38.03809523809523
+PDB:  4wyu  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 10.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M POTASSIUM IODIDE
+      2: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 10% (W/V) PEG 3350, 0.2M KI, 0.1M        
+  HEPES, PH 7.5, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K      
+
+
+
+cnt_tp= 43.0
+sum_tp= 39.03809523809523
+PDB:  3ine  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 8.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.1000 M SODIUM ACETATE pH 5.4
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 8% PEG 3350, 100 MM NAACETATE, PH        
+  5.4, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K                
+
+
+
+cnt_tp= 44.0
+sum_tp= 40.03809523809523
+PDB:  3g27  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.2000 M CALCIUM CHLORIDE
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 3350 pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2M CACL2, 20%PEG 3350, PH 7, VAPOR     
+  DIFFUSION, HANGING DROP, TEMPERATURE 291K                           
+
+
+
+cnt_tp= 45.0
+sum_tp= 41.03809523809523
+PDB:  3nlo  #parts passed/#total:  5 / 5
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.1000 M MES pH 5.8
+      2: 0.1000 M AMMONIUM ACETATE
+      3: 0.0050 M GLUTATHIONE, REDUCED
+      4: 0.000035 M SODIUM DODECYL SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20-24% PEG3350, 100MM MES, 100-140MM     
+  AMMONIUM ACETATE, 5MM GSH, 35UM SDS, PH 5.8, VAPOR DIFFUSION,       
+  SITTING DROP, TEMPERATURE 277K                                      
+
+
+
+cnt_tp= 46.0
+sum_tp= 42.03809523809523
+PDB:  5by0  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M MAGNESIUM CHLORIDE
+      1: 0.1000 M BIS-TRIS pH 6.3
+      2: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M MGCL2, 0.1 M BIS-TRIS, 25%         
+  PEG3350, PH 6.3, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 291K    
+
+
+
+cnt_tp= 47.0
+sum_tp= 43.03809523809523
+PDB:  1ea1  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 10.0000 V/V 2-PROPANOL
+      2: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% PEG 4000, 10% ISOPROPANOL, 0.1 M     
+  HEPES, PH=7.5, 4-PHENYLIMIDAZOLE IN SATURATING CONCENTRATION        
+  FLUCONAZOLE WAS INTRODUCED INTO THE BINDING SITE BY REPLACEMENT     
+  OF 4-PHENYLIMIDAZOLE USING CRYSTAL SOAKING PROCEDURE., PH 7.50      
+
+
+
+cnt_tp= 48.0
+sum_tp= 44.03809523809523
+PDB:  4njz  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.2000 M SODIUM CITRATE
+      1: 0.1000 M SODIUM CACODYLATE pH 6.5
+      2: 30.0000 V/V 2-PROPANOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2M SODIUM CITRATE, 0.1M SODIUM         
+  CACODYLATE, 30% 2-PROPANOL, PH 6.5, VAPOR DIFFUSION, HANGING        
+  DROP, TEMPERATURE 278K                                              
+
+
+
+cnt_tp= 49.0
+sum_tp= 45.03809523809523
+PDB:  3e1j  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 1.8000 M AMMONIUM SULFATE
+      1: 0.1000 M TRISODIUM CITRATE pH 5.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.8 M AMMONIUM SULFATE, 0.1 M TRI-       
+  SODIUM CITRATE PH 5.0. CRYSTALS LATER SOAKED IN CRYOPROTECTANT      
+  AT PH 7, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 289K, PH        
+  5.00                                                                
+
+
+
+cnt_tp= 50.0
+sum_tp= 46.03809523809523
+PDB:  3dyd  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 30.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+      1: 0.1000 M SODIUM ACETATE pH 4.6
+      2: 0.0030 M PYRIDOXAL-5-PHOSPHATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% MPD, 0.1M NA-ACETATE PH 4.6, 3MM     
+  PLP, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293K                
+
+
+
+cnt_tp= 51.0
+sum_tp= 47.03809523809523
+PDB:  4l4e  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.0500 M TRIS
+      1: 0.4000 M POTASSIUM CHLORIDE
+      2: 32.0000 W/V POLYETHYLENE GLYCOL 4000
+      3: 0.0012 M D-CAMPHOR pH 7.4
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 50 MM TRIS, 400 MM POTASSIUM CHLORIDE,   
+  32% PEG4000, 1.2 MM D-CAMPHOR, PH 7.4, VAPOR DIFFUSION, HANGING     
+  DROP, TEMPERATURE 298K                                              
+
+
+
+cnt_tp= 52.0
+sum_tp= 48.03809523809523
+PDB:  4yz5  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2500 M AMMONIUM SULFATE
+      2: 0.1000 M HEPES pH 8.0
+      3: 7.5000 V/V 2-PROPANOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% PEG3350, 0.25M AMMONIUM SULFATE,     
+  0.1M HEPES PH8, 7.5% ISOPROPANOL, VAPOR DIFFUSION, HANGING DROP,    
+  TEMPERATURE 293K                                                    
+
+
+
+cnt_tp= 53.0
+sum_tp= 49.03809523809523
+PDB:  4oyk  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 32.0000 W/V POLYETHYLENE GLYCOL 6000
+      1: 1.0000 M LITHIUM CHLORIDE
+      2: 0.1000 M TRIS pH 8.4
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 32% PEG 6000, 1M LICL, 100 MM TRIS PH    
+  8.4                                                                 
+
+
+
+cnt_tp= 54.0
+sum_tp= 50.03809523809523
+PDB:  4ycq  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M CAPS pH 10.5
+      1: 40.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M CAPS PH 10.5, 40% (V/V) MPD,       
+  VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 291K                     
+
+
+
+cnt_tp= 55.0
+sum_tp= 51.03809523809523
+PDB:  3uv1  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M BIS-TRIS pH 7.4
+      1: 28.0000 W/V POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M BIS-TRIS PH 7.4 AND 28% PEG MME    
+  2000, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K               
+
+
+
+cnt_tp= 56.0
+sum_tp= 52.03809523809523
+PDB:  5ws4  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 1.2000 M SODIUM CITRATE
+      1: 0.1000 M SODIUM HEPES pH 7.2
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.2M SODIUM CITRIC ACID, 0.1M SODIUM     
+  HEPES (PH7.2), VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K      
+
+
+
+cnt_tp= 57.0
+sum_tp= 53.03809523809523
+PDB:  4jdz  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.2000 M CALCIUM CHLORIDE
+      1: 0.1000 M SODIUM HEPES pH 8.0
+      2: 20.0000 V/V 2-PROPANOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2M CALCIUM CHLORIDE DIHYDRATE, 0.1M    
+  HEPES SODIUM(7.5), 20%(V/V) 2-PROPANOL, PH 8.0, VAPOR DIFFUSION,    
+  HANGING DROP, TEMPERATURE 291K                                      
+
+
+
+cnt_tp= 58.0
+sum_tp= 54.03809523809523
+PDB:  5kww  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 1.5400 M POTASSIUM SODIUM TARTRATE
+      1: 0.2000 M LITHIUM SULFATE
+      2: 0.1000 M CHES pH 9.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.54 M POTASSIUM/SODIUM TARTRATE, 0.2    
+  M LITHIUM SULFATE, 0.1 M CHES, PH 9.5, VAPOR DIFFUSION, HANGING     
+  DROP, TEMPERATURE 293K                                              
+
+
+
+cnt_tp= 59.0
+sum_tp= 55.03809523809523
+PDB:  4hk2  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 2.4000 M AMMONIUM SULFATE
+      1: 0.1000 M CITRIC ACID pH 4.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2.4 M AMSO4 AND 0.1M CITRIC ACID PH      
+  4.0, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 277K                
+
+
+
+cnt_tp= 60.0
+sum_tp= 56.03809523809523
+PDB:  3pms  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 25.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.2000 M AMMONIUM SULFATE
+      2: 0.1000 M SODIUM ACETATE pH 4.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 25% PEG 4000, 0.2M AMMONIUM SULFATE,     
+  0.1M SODIUM ACETATE, PH 4.5, VAPOR DIFFUSION, HANGING DROP,         
+  TEMPERATURE 295.15K                                                 
+
+
+
+cnt_tp= 61.0
+sum_tp= 57.03809523809523
+PDB:  3qpe  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M TRIS
+      1: 0.2000 M MAGNESIUM CHLORIDE pH 8.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: PEG 3350, 0.1M TRIS, 0.2M MAGNESIUM      
+  CHLORIDE, PH 8.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE        
+  293.0K                                                              
+
+
+
+cnt_tp= 62.0
+sum_tp= 58.03809523809523
+PDB:  3zed  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M POTASSIUM FLUORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 20% (W/V) POLYETHYLENE GLYCOL            
+  3350 AND 0.2M POTASSIUM FLUORIDE                                    
+
+
+
+cnt_tp= 63.0
+sum_tp= 59.03809523809523
+PDB:  4i7u  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M TRIS pH 8.5
+      1: 2.0000 M AMMONIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M TRIS PH 8.5, 2 M AMMONIUM          
+  SULPHATE, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K           
+
+
+
+cnt_tp= 64.0
+sum_tp= 60.03809523809523
+PDB:  5szu  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M TRIS pH 8.5
+      1: 2.0000 M AMMONIUM PHOSPHATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM TRIS PH 8.5 AND 2 M AMMONIUM      
+  PHOSPHATE, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 296K          
+
+
+
+cnt_tp= 65.0
+sum_tp= 61.03809523809523
+PDB:  4r3h  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M AMMONIUM SULFATE
+      2: 0.1000 M BIS-TRIS pH 6.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 25% PEG3350, 0.2M AMMONIUM SULPHATE,     
+  0.1M BIS-TRIS, PH 6.5, VAPOR DIFFUSION, TEMPERATURE 293K            
+
+
+
+cnt_tp= 66.0
+sum_tp= 62.03809523809523
+PDB:  3tgt  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 14.0000 W/V POLYETHYLENE GLYCOL 1500
+      1: 12.0000 V/V POLYETHYLENE GLYCOL 400
+      2: 0.1000 M HEPES
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 14% PEG 1500, 12% PEG 400, 0.1M HEPES,   
+  VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K, PH 7.5             
+
+
+
+cnt_tp= 67.0
+sum_tp= 63.03809523809523
+PDB:  3azc  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1000 M SODIUM HEPES pH 7.5
+      1: 10.0000 V/V 2-PROPANOL
+      2: 20.0000 W/V POLYETHYLENE GLYCOL 3000
+      3: 15.0000 V/V GLYCEROL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M NA-HEPES, 10% 2-PROPANOL, 20% PEG   
+  3000, 15% GLYCEROL, PH 7.5, VAPOR DIFFUSION, SITTING DROP,          
+  TEMPERATURE 293K                                                    
+
+
+
+cnt_tp= 68.0
+sum_tp= 64.03809523809522
+PDB:  3tq8  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M HEPES pH 7.5
+      1: 25.0000 W/V POLYETHYLENE GLYCOL 6000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM HEPES, PH 7.5, 25% PEG 6000 ,     
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K                     
+
+
+
+cnt_tp= 69.0
+sum_tp= 65.03809523809522
+PDB:  4c79  #parts passed/#total:  3 / 5
+   Reservoir:
+      0: 0.1000 M HEPES pH 7.0
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 6000
+      2: 0.0100 M ZINC CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM HEPES PH7.0, PEG 6000             
+  20%, 10 MM ZNCL2                                                    
+
+
+
+cnt_tp= 70.0
+sum_tp= 65.63809523809522
+PDB:  4r96  #parts passed/#total:  1 / 1
+   Reservoir:
+      0: 1.4000 M SODIUM MALONATE pH 6.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: IN 1.4 M NA MALONATE PH 6.0, VAPOR       
+  DIFFUSION, SITTING DROP, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 71.0
+sum_tp= 66.63809523809522
+PDB:  6fao  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 1.0000 M AMMONIUM SULFATE
+      1: 0.1000 M BIS-TRIS pH 5.5
+      2: 1.0000 W/V POLYETHYLENE GLYCOL 3350 pH 8.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1 M (NH4)2SO4, 0.1 M BISTRIS PH 5.5, 1   
+  % PEG 3350, PH 8, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293K   
+
+
+
+cnt_tp= 72.0
+sum_tp= 67.63809523809522
+PDB:  6ex7  #parts passed/#total:  4 / 5
+   Reservoir:
+      0: 0.2000 M AMMONIUM SULFATE
+      1: 0.1000 M BIS-TRIS pH 5.5
+      2: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+      3: 0.0050 M CADMIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2 M AMMONIUM SULFATE, 0.1 M BIS-TRIS   
+  PH 5.5, 25 % PEG 3350, 5 MM CDCL2,10 MM FAROPENUM, TEMPERATURE      
+  289K, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 289.0K             
+
+
+
+cnt_tp= 73.0
+sum_tp= 68.43809523809522
+PDB:  4it0  #parts passed/#total:  1 / 1
+   Reservoir:
+      0: 20.0000 V/V SUCROSE pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: CRYSTALS WERE GROWN FROM ONE PART        
+  RTCB+GMP COVALENT ADDUCT SOLUTION AT 200 MICROMOLAR, MIXED WITH     
+  ONE PART RESERVOIR SOLUTION, 2.0 M AMMONIUM SULFATE, 0.1 M HEPES    
+  BUFFER. CRYSTALS WERE CRYOPROTECTED IN RESERVOIR SOLUTION           
+  SUPPLEMENTED WITH 20% SUCROSE. , PH 7, VAPOR DIFFUSION, HANGING     
+  DROP, TEMPERATURE 298K                                              
+
+
+
+cnt_tp= 74.0
+sum_tp= 69.43809523809522
+PDB:  3ot0  #parts passed/#total:  6 / 8
+   Reservoir:
+      0: 0.0400 M SODIUM CACODYLATE pH 6.0
+      1: 0.0120 M SPERMINE
+      2: 0.0800 M SODIUM CHLORIDE
+      3: 0.0120 M POTASSIUM CHLORIDE
+      4: 35.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.2 MM DNA IN 10% 2-METHANE-2,4-         
+  PENTANEDIOL (MPD), 40 MM SODIUM CACODYLATE PH 6.0, 12 MM SPERMINE   
+  -HCL, 80 MM NACL, 12 MM KCL, 12 MM MGCL2 AGAINST A RESERVIORE OF    
+  35% MPD, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 289K            
+
+
+
+cnt_tp= 75.0
+sum_tp= 70.18809523809522
+PDB:  5vn2  #parts passed/#total:  4 / 5
+   Reservoir:
+      0: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.0200 M SODIUM ACETATE
+      2: 0.0040 M NICOTINAMIDE ADENINE DINUCLEOTIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: MCSG1 F5 (273386F5): 20% PEG3350, 20MM   
+  SODIUM ACETATE, 4MM NAD, PROTEIN CONC. 19.9MG/ML, CRYO 15%          
+  ETHYLENE GLYCOL: UNIQUE PUCK ID: JIF2-4, PH 7.5, VAPOR DIFFUSION,   
+  SITTING DROP, TEMPERATURE 290K                                      
+
+
+
+cnt_tp= 76.0
+sum_tp= 70.98809523809521
+PDB:  3m3u  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M SODIUM ACETATE pH 4.8
+      1: 7.0000 V/V SODIUM CHLORIDE
+      2: 25.0000 V/V ETHYLENE GLYCOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M SODIUM ACETATE, 7% NACL, 25%        
+  ETHYLENE GLYCOL, PH 4.8, VAPOR DIFFUSION, HANGING DROP,             
+  TEMPERATURE 295K                                                    
+
+
+
+cnt_tp= 77.0
+sum_tp= 71.98809523809521
+PDB:  3c8s  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 2.0000 M POTASSIUM SODIUM PHOSPHATE pH 6.7
+      1: 0.0500 M BETA-MERCAPTOETHANOL
+      2: 0.0500 M BETA-MERCAPTOETHANOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2 M NA/K PHOSPHATE PH 6.7 50 MM          
+  REDUCED BME 50 MM OXIDIZED BME, VAPOR DIFFUSION, HANGING DROP,      
+  TEMPERATURE 277K, PH 6.70                                           
+
+
+
+cnt_tp= 78.0
+sum_tp= 72.98809523809521
+PDB:  4k7r  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 7.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M AMMONIUM SULFATE
+      2: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 7% PEG3350, 0.2M NH4SO4, 0.1M HEPES,     
+  PH 7.5, VAPOR DIFFUSION, TEMPERATURE 298K                           
+
+
+
+cnt_tp= 79.0
+sum_tp= 73.98809523809521
+PDB:  4o56  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 2.0000 M AMMONIUM SULFATE
+      1: 0.1000 M BIS-TRIS pH 6.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2M AMMONIUM SULFATE, 100MM BIS-TRIS,     
+  PH 6.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K             
+
+
+
+cnt_tp= 80.0
+sum_tp= 74.98809523809521
+PDB:  3cem  #parts passed/#total:  3 / 6
+   Reservoir:
+      0: 0.0200 M BES pH 6.5
+      1: 0.0010 M EDTA
+      2: 0.0005 M DITHIOTHREITOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 7 MG/ML IN 20 MM BES, 1 MM EDTA, 0.5     
+  MM DTT, PH 6.5, 50 MM NBG, 2.5 MM AVD (AVE9423), VAPOR DIFFUSION,   
+  HANGING DROP                                                        
+
+
+
+cnt_tp= 81.0
+sum_tp= 75.48809523809521
+PDB:  4fzq  #parts passed/#total:  2 / 3
+   Reservoir:
+      0: 38.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+      1: 0.1000 M SODIUM ACETATE pH 4.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 38% MPD, 0.1M ACETATE PH 4.5, 0.1M       
+  NBSD-256, VAPOR DIFFUSION, TEMPERATURE 293K                         
+
+
+
+cnt_tp= 82.0
+sum_tp= 76.15476190476188
+PDB:  3guc  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 1.0000 M LITHIUM SULFATE
+      1: 0.3000 M AMMONIUM SULFATE
+      2: 0.1000 M SODIUM CITRATE pH 6.2
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1 M LITHIUM SULPHATE, 0.3 M AMMONIUM     
+  SULPHATE,0.1 M SODIUM CITRATE, PH 6.2, VAPOR DIFFUSION, HANGING     
+  DROP, TEMPERATURE 287K                                              
+
+
+
+cnt_tp= 83.0
+sum_tp= 77.15476190476188
+PDB:  3u4v  #parts passed/#total:  1 / 1
+   Reservoir:
+      0: 3.0000 M SODIUM CHLORIDE pH 4.8
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 3 M NACL, PH 4.8, VAPOR DIFFUSION,       
+  HANGING DROP, TEMPERATURE 277K                                      
+
+
+
+cnt_tp= 84.0
+sum_tp= 78.15476190476188
+PDB:  4hyr  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M BIS-TRIS pH 5.5
+      1: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M BIS-TRIS PH 5.5, 25% PEG 3350,      
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K                     
+
+
+
+cnt_tp= 85.0
+sum_tp= 79.15476190476188
+PDB:  3hpq  #parts passed/#total:  4 / 6
+   Reservoir:
+      0: 0.0500 M MES pH 6.7
+      1: 0.0010 M EDTA
+      2: 0.0500 M MES pH 7.0
+      3: 3.0000 W/V POLYETHYLENE GLYCOL 2000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 45 MG/ML AK IN 50 MM MES PH 6.7, 1 MM    
+  EDTA, WITH 50% 50MM MES PH 7.0-7.3, 3% W/V PEG 2000 AND 1.8-2.3     
+  AMMONIUM SULFATE, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 298K   
+
+
+
+cnt_tp= 86.0
+sum_tp= 79.82142857142856
+PDB:  1gn9  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 25.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.1000 M MES pH 6.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 25% PEG 4000, 0.1M MES PH6.0, T=293K     
+
+
+
+cnt_tp= 87.0
+sum_tp= 80.82142857142856
+PDB:  5iks  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M TRIS CHLORIDE pH 7.4
+      1: 0.0010 M EDTA
+      2: 2.5000 M AMMONIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M TRIS-HCL, PH 7.4, 1MM EDTA, 2.5    
+  M AMMONIUM SULFATE, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE      
+  293K                                                                
+
+
+
+cnt_tp= 88.0
+sum_tp= 81.82142857142856
+PDB:  4ckv  #parts passed/#total:  4 / 6
+   Reservoir:
+      0: 0.1000 W/V N-DODECYL-B-D-MALTOSIDE
+      1: 0.0050 M HEPES pH 7.5
+      2: 18.0000 W/V POLYETHYLENE GLYCOL 8000
+      3: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: VAPOR DIFFUSION METHOD, MOTHER           
+  LIQUOR:1MM VEGFR-1-D2,0.1%(W/V) DDM,4MM LAXAPHYCINE-A,5MM           
+  HEPES/NAOH PH 7.5. RESERVOIR:18% (W/V) PEG8000,100MM                
+  HEPES/NAOH PH 7.5, 18C                                              
+
+
+
+cnt_tp= 89.0
+sum_tp= 82.48809523809523
+PDB:  3aj3  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.1500 M AMMONIUM ACETATE
+      2: 0.1000 M SODIUM ACETATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% PEG4000, 0.15M AMMONIUM ACETATE,     
+  0.1M SODIUM ACETATE, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE     
+  277K                                                                
+
+
+
+cnt_tp= 90.0
+sum_tp= 83.48809523809523
+PDB:  4dr8  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000
+      1: 0.1500 M POTASSIUM BROMIDE pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: HAMPTON RESEARCH INDEX H12: 30% PEG      
+  2000 MME, 150MM KBR, PH 7.5, VAPOR DIFFUSION, SITTING DROP,         
+  TEMPERATURE 290K                                                    
+
+
+
+cnt_tp= 91.0
+sum_tp= 84.48809523809523
+PDB:  5csb  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 0.1000 M SODIUM ACETATE
+      2: 15.0000 V/V GLYCEROL
+      3: 0.2000 M AMMONIUM ACETATE pH 4.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% PEG 4000, 0.1M SODIUM ACETATE, 15%   
+  GLYCEROL, 0.2M AMMONIUM ACETATE, PH 4.5, VAPOR DIFFUSION,           
+  SITTING DROP, TEMPERATURE 293K                                      
+
+
+
+cnt_tp= 92.0
+sum_tp= 85.48809523809523
+PDB:  3poy  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 12.0000 W/V POLYETHYLENE GLYCOL 20000
+      1: 0.1000 M BICINE pH 9.0
+      2: 0.0010 M EDTA
+      3: 0.1500 M SODIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 12% PEG20000, 100 MM BICINE, 1 MM        
+  EDTA, 150 MM NACL , PH 9.0, VAPOR DIFFUSION, TEMPERATURE 287K       
+
+
+
+cnt_tp= 93.0
+sum_tp= 86.48809523809523
+PDB:  6ci9  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M TRIS
+      1: 0.2000 M MAGNESIUM CHLORIDE
+      2: 13.0000 W/V POLYETHYLENE GLYCOL 4000 pH 8.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M TRIS, 0.2 M MGCL2, 13% PEG4000,    
+  PH 8.5, EVAPORATION, TEMPERATURE 298K                               
+
+
+
+cnt_tp= 94.0
+sum_tp= 87.48809523809523
+PDB:  1a71  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.0050 M 2,2,2-TRIFLUOROETHANOL
+      1: 18.0000 V/V POLYETHYLENE GLYCOL 400
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 4MICROLITER HANGING DROPS TRIS PH        
+  8.4 AT 4C, 5MM TRIFLUROETHANOL, 4% PEG400 EQUILIBRATED AGAINST      
+  WELLS CONTAINING 5MM TFE AND 18%PEG 400, VAPOR DIFFUSION -          
+  HANGING DROP                                                        
+
+
+
+cnt_tp= 95.0
+sum_tp= 88.48809523809523
+PDB:  3g7k  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1500 M TRIS CHLORIDE pH 8.0
+      1: 0.1500 M SODIUM CHLORIDE
+      2: 23.0000 W/V POLYETHYLENE GLYCOL 1500
+      3: 18.0000 V/V GLYCEROL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: PROTEIN SOLUTION: 150MM TRIS/HCL,        
+  150MM NACL; RESERVOIR SOLUTION: 23% PEG 1500, 18% GLYCEROL          
+  ANHYDROUS. 0.001ML PROTEIN PLUS 0.001ML RESERVOIR, PH 8.0,          
+  VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K                     
+
+
+
+cnt_tp= 96.0
+sum_tp= 89.48809523809523
+PDB:  4n5d  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.3000 M AMMONIUM DIHYDROGEN PHOSPHATE
+      1: 0.1000 M TRIS pH 8.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2-METHYL-2,4-PENTANEDIOL, 0.3 M          
+  AMMONIUM PHOSPHATE MONOBASIC, 0.1 M TRIS, PH 8.5, VAPOR             
+  DIFFUSION, HANGING DROP, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 97.0
+sum_tp= 90.48809523809523
+PDB:  4h80  #parts passed/#total:  2 / 3
+   Reservoir:
+      0: 0.2000 M POTASSIUM ACETATE
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2 M POTASSIUM ACETATE, 20 % PEG        
+  3350, (3 MICROLITERS OF 3 MG/ML OF ALDH3A1 + 3 MICROLITRES OF       
+  MOTHER LIQUOR), PH 7.5, VAPOR DIFFUSION, SITTING DROP,              
+  TEMPERATURE 298.15K                                                 
+
+
+
+cnt_tp= 98.0
+sum_tp= 91.1547619047619
+PDB:  3p55  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 2.9000 M AMMONIUM SULFATE
+      1: 0.1000 M SODIUM MES pH 6.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2.9M AMMONIUM SULFATE, 0.1M MES/NAOH,    
+  PH 6.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 289K             
+
+
+
+cnt_tp= 99.0
+sum_tp= 92.1547619047619
+PDB:  5k8t  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 10.0000 W/V POLYETHYLENE GLYCOL 6000
+      1: 5.0000 V/V 2-METHYL-2,4-PENTANEDIOL
+      2: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 10% PEG 6000, 5% MPD, 0.1M HEPES         
+  PH7.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 291K              
+
+
+
+cnt_tp= 100.0
+sum_tp= 93.1547619047619
+PDB:  3f48  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M HEPES pH 7.0
+      1: 0.2000 M SODIUM CHLORIDE
+      2: 17.0000 V/V POLYETHYLENE GLYCOL MONOMETHYL ETHER 550
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M HEPES, 0.2M NACL, 17-22% PEG-       
+  MME 550, PH 7.0, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE         
+  293K                                                                
+
+
+
+cnt_tp= 101.0
+sum_tp= 94.1547619047619
+PDB:  5pxk  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M MES pH 6.1
+      1: 20.0000 W/V POLYETHYLENE GLYCOL 20000 pH 7.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M MES PH 6.1 -- 20% PEG20K, PH 7,     
+  VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 277K                     
+
+
+
+cnt_tp= 102.0
+sum_tp= 95.1547619047619
+PDB:  5xcu  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.2000 M AMMONIUM SULFATE
+      1: 0.1000 M HEPES pH 7.5
+      2: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.2M AMMONIUM SULFATE, 0.1M HEPES (PH    
+  7.5), 25%(W/V) PEG3350, VAPOR DIFFUSION, TEMPERATURE 293K           
+
+
+
+cnt_tp= 103.0
+sum_tp= 96.1547619047619
+PDB:  3e67  #parts passed/#total:  2 / 3
+   Reservoir:
+      0: 0.0500 M MES pH 5.3
+      1: 25.0000 V/V LITHIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 50 MM MES PH 5.3, 25% LITHIUM SULFATE,   
+  5% B-OCTYL-GLUCODISE, PH 6.0, VAPOR DIFFUSION, HANGING DROP,        
+  TEMPERATURE 277K                                                    
+
+
+
+cnt_tp= 104.0
+sum_tp= 96.82142857142857
+PDB:  5fjp  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1000 M TRIS CHLORIDE pH 8.0
+      1: 15.0000 W/V POLYETHYLENE GLYCOL 4000
+      2: 0.8000 M SODIUM FORMATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100 MM TRIS HCL PH 8; 15% (W/V)          
+  PEG 4K; 800 MM SODIUM FORMATE; PROTEIN AT 8 MG PER ML               
+
+
+
+cnt_tp= 105.0
+sum_tp= 97.82142857142857
+PDB:  3bq9  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M HEPES pH 7.5
+      1: 2.0000 M AMMONIUM SULFATE
+      2: 10.0000 V/V GLYCEROL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 100MM HEPES PH 7.5, 2M AMMONIUM          
+  SULFATE, 10% GLYCEROL, VAPOR DIFFUSION, SITTING DROP,               
+  TEMPERATURE 294K                                                    
+
+
+
+cnt_tp= 106.0
+sum_tp= 98.82142857142857
+PDB:  4pkv  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 11.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 0.0500 M BIS-TRIS pH 6.8
+      2: 0.1000 M MAGNESIUM ACETATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 11-16% PEG 8K, 50 MM BIS-TRIS, 100 MM    
+  MAGNESIUM ACETATE, PH 6.8, VAPOR DIFFUSION, HANGING DROP,           
+  TEMPERATURE 286K                                                    
+
+
+
+cnt_tp= 107.0
+sum_tp= 99.82142857142857
+PDB:  4ddb  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.0500 M SODIUM ACETATE pH 6.5
+      1: 10.0000 V/V SODIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: HEWL CO-CRYSTALLIZED WITH CISPLATIN IN   
+  462.5 UL 0.05 M SODIUM ACETATE, PH 6.5, 462.5 UL 10% SODIUM         
+  CHLORIDE, AND 75 UL DMSO, BATCH, TEMPERATURE 277K                   
+
+
+
+cnt_tp= 108.0
+sum_tp= 100.82142857142857
+PDB:  4i6u  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1000 M SODIUM SULFATE
+      1: 0.2000 M SODIUM ACETATE
+      2: 0.1000 M BIS-TRIS PROPANE pH 8.5
+      3: 20.0000 W/V POLYETHYLENE GLYCOL 3350
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M SODIUM SULPHATE, 0.2 M SODIUM      
+  ACETATE, 0.1 M BIS TRIS PROPANE, 20 % W/V PEG 3350, PH 8.5, VAPOR   
+  DIFFUSION, SITTING DROP, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 109.0
+sum_tp= 101.82142857142857
+PDB:  4v0c  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.3000 M POTASSIUM THIOCYANATE
+      1: 0.1000 M SODIUM ACETATE pH 5.6
+      2: 0.0050 M CALCIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.3 M POTASSIUM THIOCYANATE, 0.1 M       
+  SODIUM ACETATE TRIHYDRATE PH=5.6, 5 MM CACL2                        
+
+
+
+cnt_tp= 110.0
+sum_tp= 102.82142857142857
+PDB:  3lgb  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M TRIS CHLORIDE pH 7.5
+      1: 0.0010 M ZINC ACETATE
+      2: 11.0000 V/V ETHANOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M TRISHCL PH 7.5, 1MM ZN ACETATE,     
+  11% ETHANOL, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 291K        
+
+
+
+cnt_tp= 111.0
+sum_tp= 103.82142857142857
+PDB:  4w7v  #parts passed/#total:  4 / 4
+   Reservoir:
+      0: 0.1000 M SODIUM CACODYLATE pH 6.5
+      1: 0.2000 M SODIUM ACETATE
+      2: 28.0000 W/V POLYETHYLENE GLYCOL 8000
+      3: 5.0000 V/V GLYCEROL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M SODIUM CACODYLATE, 0.2 M SODIUM     
+  ACETATE, 28% PEG8000, 5% GLYCEROL, PH 6.5, VAPOR DIFFUSION,         
+  SITTING DROP, TEMPERATURE 291K                                      
+
+
+
+cnt_tp= 112.0
+sum_tp= 104.82142857142857
+PDB:  3fp0  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 2.0000 M AMMONIUM SULFATE
+      1: 0.1000 M HEPES pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 2M AMMONIUM SULFATE, 100 MM HEPES,       
+  PH 7.5, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 277K             
+
+
+
+cnt_tp= 113.0
+sum_tp= 105.82142857142857
+PDB:  5wav  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.1000 M HEPES pH 7.5
+      1: 10.0000 W/V POLYETHYLENE GLYCOL 8000
+      2: 8.0000 V/V ETHYLENE GLYCOL
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1M HEPES PH7.5 10% V/V POLYETHYLENE    
+  GLYCOL 8000 8% V/V ETHYLENE GLYCOL, VAPOR DIFFUSION, SITTING        
+  DROP, TEMPERATURE 295K                                              
+
+
+
+cnt_tp= 114.0
+sum_tp= 106.82142857142857
+PDB:  6fkj  #parts passed/#total:  5 / 5
+   Reservoir:
+      0: 5.0000 W/V POLYETHYLENE GLYCOL 4000
+      1: 12.0000 V/V GLYCEROL
+      2: 0.0300 M MAGNESIUM CHLORIDE
+      3: 0.0300 M CALCIUM CHLORIDE
+      4: 0.1000 M MES-IMIDAZOLE pH 6.7
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 5% PEG 4K, 12% GLYCEROL, 30 MM MGCL2,    
+  30 MM CACL2, 100 MM MES/IMIDAZOLE, PH 6.7, VAPOR DIFFUSION,         
+  TEMPERATURE 294K                                                    
+
+
+
+cnt_tp= 115.0
+sum_tp= 107.82142857142857
+PDB:  4jpo  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 3.0000 M SODIUM FORMATE
+      1: 0.1000 M BIS-TRIS pH 7.0
+      2: 0.0100 M CALCIUM CHLORIDE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 3M SODIUM FORMATE, 100 MM BIS-TRIS,      
+  10MM CALCIUM CHLORIDE, PH 7.0, VAPOR DIFFUSION, TEMPERATURE 293K    
+
+
+
+cnt_tp= 116.0
+sum_tp= 108.82142857142857
+PDB:  4xye  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M MES pH 6.5
+      1: 12.0000 W/V POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M MES PH 6.5, 12 % W/V PEG 2000      
+  MME, VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 293K                
+
+
+
+cnt_tp= 117.0
+sum_tp= 109.82142857142857
+PDB:  4g1f  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 22.5000 V/V POLYETHYLENE GLYCOL MONOMETHYLETHER 2000
+      1: 0.1000 M BICINE pH 7.8
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 22.5% PEG 200MME, 0.1M BICINE PH 7.8     
+  , VAPOR DIFFUSION, SITTING DROP, TEMPERATURE 277K                   
+
+
+
+cnt_tp= 118.0
+sum_tp= 110.82142857142857
+PDB:  5iy0  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.1000 M HEPES
+      1: 10.0000 W/V POLYETHYLENE GLYCOL 4000
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 0.1 M HEPES, PH 7.1; 0.1 MAGNESIUM       
+  CHLORIDE; 10% PEG 4000, VAPOR DIFFUSION, HANGING DROP,              
+  TEMPERATURE 295K                                                    
+
+
+
+cnt_tp= 119.0
+sum_tp= 111.82142857142857
+PDB:  5j0d  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 25.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.2000 M MAGNESIUM CHLORIDE
+      2: 0.1000 M BIS-TRIS pH 7.5
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 25% PEG3350, 0.2 M MGCL2, 0.1M BISTRIS   
+  PH 7.5, VAPOR DIFFUSION, TEMPERATURE 277K                           
+
+
+
+cnt_tp= 120.0
+sum_tp= 112.82142857142857
+PDB:  3bqv  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 30.0000 W/V POLYETHYLENE GLYCOL 8000
+      1: 0.1000 M SODIUM CACODYLATE pH 6.5
+      2: 0.2000 M SODIUM ACETATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 30% PEG 8000, 0.1 M SODIUM CACODYLATE,   
+  0.2 M SODIUM ACETATE, PH 6.5, VAPOR DIFFUSION, SITTING DROP,        
+  TEMPERATURE 277K                                                    
+
+
+
+cnt_tp= 121.0
+sum_tp= 113.82142857142857
+PDB:  3gc8  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 12.0000 W/V POLYETHYLENE GLYCOL 3350
+      1: 0.1200 M AMMONIUM FLUORIDE
+      2: 0.000030 M CTAB pH 7.4
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 12% PEG 3350, 0.12 M AMMONIUM            
+  FLUORIDE, 30 UM CTAB, PH 7.4, VAPOR DIFFUSION, HANGING DROP,        
+  TEMPERATURE 291K                                                    
+
+
+
+cnt_tp= 122.0
+sum_tp= 114.82142857142857
+PDB:  4x3a  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 1.1500 M AMMONIUM SULFATE
+      1: 0.1000 M TRIS
+      2: 0.2000 M LITHIUM SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 1.15 M (NH4)2SO4, 0.1 M TRIS, 0.2 M      
+  LISO4, VAPOR DIFFUSION, HANGING DROP, TEMPERATURE 293K              
+
+
+
+cnt_tp= 123.0
+sum_tp= 115.82142857142857
+PDB:  4apj  #parts passed/#total:  3 / 3
+   Reservoir:
+      0: 0.0500 M SODIUM ACETATE pH 4.7
+      1: 15.0000 W/V POLYETHYLENE GLYCOL 4000
+      2: 0.000010 M ZINC SULFATE
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 50MM SODIUM ACETATE PH 4.7, 15%          
+  PEG4000, 10UM ZNSO4                                                 
+
+
+
+cnt_tp= 124.0
+sum_tp= 116.82142857142857
+PDB:  5mcd  #parts passed/#total:  2 / 2
+   Reservoir:
+      0: 0.9000 M AMMONIUM SULFATE
+      1: 0.1000 M SODIUM CITRATE pH 4.0
+
+   REMARK280 line: 
+ CRYSTALLIZATION CONDITIONS: 900MM AMMONIUM SULPHATE, 100MM           
+  MONOSODIUM CITRATE, PH 4, VAPOR DIFFUSION, HANGING DROP,            
+  TEMPERATURE 289K                                                    
+
+
+
+cnt_tp= 125.0
+sum_tp= 117.82142857142857
+Est. mean conversion =  94.2571428571 %
+0
+[]
+[]
+[]
+{'3u03': {'reservoir': [[1.3, 'M', 'AMMONIUM SULFATE', None], [0.2, 'M', 'LITHIUM SULFATE', None], [0.05, 'M', 'SODIUM CHLORIDE', None], [0.1, 'M', 'SODIUM ACETATE', 4.5], [15.0, 'V/V', 'GLYCEROL', None]]}, '5v0c': {'reservoir': [[0.1, 'M', 'SODIUM ACETATE', 7.0], [0.01, 'M', 'POTASSIUM CHLORIDE', None], [2.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None]]}, '4p2a': {'reservoir': [[4.0, 'M', 'SODIUM CHLORIDE', None], [0.1, 'M', 'SODIUM CITRATE', 6.0]]}, '5tea': {'reservoir': [[0.2, 'M', 'CALCIUM CHLORIDE', None], [0.1, 'M', 'SODIUM ACETATE', 4.6], [30.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None]]}, '5mv4': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 6000', None], [0.1, 'M', 'MES', 6.0], [0.2, 'M', 'CALCIUM CHLORIDE', None]]}, '3ila': {'reservoir': [[15.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'SODIUM CHLORIDE', None], [0.1, 'M', 'BIS-TRIS', 7.0]]}, '4n3y': {'reservoir': [[0.15, 'M', 'MAGNESIUM ACETATE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '5ddh': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.1, 'M', 'TRIS CHLORIDE', 8.0], [0.2, 'M', 'LITHIUM SULFATE', None]]}, '3wh5': {'reservoir': [[1.2, 'M', 'POTASSIUM SODIUM TARTRATE', None], [0.1, 'M', 'CHES', 8.5], [0.2, 'M', 'LITHIUM SULFATE', None]]}, '3m8r': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.2, 'M', 'AMMONIUM ACETATE', None], [0.02, 'M', 'MAGNESIUM ACETATE', None], [0.05, 'M', 'SODIUM CACODYLATE', 6.5]]}, '5umf': {'reservoir': [[10.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [20.0, 'V/V', 'GLYCEROL', None], [0.1, 'M', 'MES-IMIDAZOLE', 6.5], [0.03, 'M', 'SODIUM FLUORIDE', 8.5]]}, '6bfj': {'reservoir': [[0.1, 'M', 'SODIUM CITRATE', 4.9], [0.01, 'M', 'DITHIOTHREITOL', None], [0.003, 'M', 'SODIUM AZIDE', None]], 'cryoprotect': [[10.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None]]}, '3it5': {'reservoir': [[0.05, 'M', 'TRIS CHLORIDE', None], [0.1, 'M', 'SODIUM CHLORIDE', 7.0]]}, '4nig': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.1, 'M', 'SODIUM CHLORIDE', None], [0.05, 'M', 'MAGNESIUM CHLORIDE', None], [0.1, 'M', 'SODIUM CACODYLATE', 6.5]]}, '3b1e': {'reservoir': [[22.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.1, 'M', 'HEPES', 7.5], [0.08, 'M', 'AMMONIUM ACETATE', None]]}, '5v45': {'reservoir': [[0.1, 'M', 'MES', 6.5], [28.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'AMMONIUM ACETATE', None]]}, '1e99': {'reservoir': [[0.05, 'M', 'MAGNESIUM CHLORIDE', None], [21.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.1, 'M', 'TRIS CHLORIDE', 8.0]]}, '5k03': {'reservoir': [[0.1, 'M', 'TRIS CHLORIDE', 7.0], [1.8, 'M', 'AMMONIUM SULFATE', None], [0.2, 'M', 'SODIUM CHLORIDE', None]]}, '5x52': {'reservoir': [[32.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.05, 'M', 'POTASSIUM PHOSPHATE', 7.0]]}, '5jjb': {'reservoir': [[22.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.1, 'M', 'MAGNESIUM ACETATE', None], [0.1, 'M', 'HEPES', 6.6]]}, '4mge': {'reservoir': [[0.25, 'M', 'SODIUM CHLORIDE', None], [0.056, 'M', 'SODIUM PHOSPHATE', None], [1.344, 'M', 'POTASSIUM PHOSPHATE', None], [4.0, 'M', 'SODIUM FORMATE', None]]}, '6g1w': {'reservoir': [[30.0, 'V/V', 'POLYETHYLENE GLYCOL 200', None], [0.05, 'M', 'MES', 6.0]]}, '4qn3': {'reservoir': [[0.1, 'M', 'CALCIUM ACETATE', 4.5], [0.1, 'M', 'SODIUM ACETATE', None], [10.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None]]}, '4l2m': {'reservoir': [[1.0, 'V/V', '2-PROPANOL', None], [2.0, 'M', 'AMMONIUM SULFATE', 5.0]]}, '5iop': {'reservoir': [[0.1, 'M', 'CITRIC ACID', None], [0.1, 'M', 'DISODIUM HYDROGEN PHOSPHATE', None], [0.4, 'M', 'DIPOTASSIUM HYDROGEN PHOSPHATE', None], [1.6, 'M', 'SODIUM DIHYDROGEN PHOSPHATE', None]]}, '1f9b': {'reservoir': [[0.02, 'M', 'TRIS CHLORIDE', 5.0]]}, '3e96': {'reservoir': [[1.8, 'M', 'TRIAMMONIUM CITRATE', 7.0]]}, '5psf': {'reservoir': [[0.1, 'M', 'BIS-TRIS', 7.0], [30.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '3tdv': {'reservoir': [[0.2, 'M', 'LITHIUM NITRATE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '4o0a': {'reservoir': [[0.1, 'M', 'MES', 6.5], [0.2, 'M', 'CALCIUM ACETATE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None]]}, '4jfo': {'reservoir': [[0.025, 'M', 'MES', 6.5], [24.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.01, 'M', 'SODIUM CHLORIDE', None]]}, '4olp': {'reservoir': [[0.1, 'M', 'POTASSIUM SODIUM PHOSPHATE', None], [30.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', 6.0]]}, '4ffk': {'reservoir': [[0.1, 'M', 'TRIS', None], [2.0, 'M', 'AMMONIUM SULFATE', 8.5]]}, '2ywk': {'reservoir': [[1.26, 'M', 'SODIUM DIHYDROGEN PHOSPHATE', None]]}, '3hqa': {'reservoir': [[2.4, 'M', 'SODIUM CHLORIDE', 4.8]]}, '4noj': {'reservoir': [[0.01, 'M', 'ZINC SULFATE', None], [0.1, 'M', 'MES', 6.7]]}, '2y0t': {'reservoir': [[0.02, 'M', 'MOPS', None], [0.1, 'M', 'SODIUM CHLORIDE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '3w5w': {'reservoir': [[0.1, 'M', 'SODIUM ACETATE', 5.2], [1.6, 'M', 'SODIUM CHLORIDE', None], [0.005, 'M', 'MAGNESIUM CHLORIDE', None]]}, '6bv4': {'reservoir': [[18.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'LITHIUM SULFATE', None], [0.1, 'M', 'HEPES', 7.2]]}, '5wkh': {'reservoir': [[17.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [2.0, 'V/V', 'ETHYLENE GLYCOL', None], [0.1, 'M', 'HEPES', 7.5]]}, '4mmh': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 3000', None], [0.1, 'M', 'TRIS', None], [0.2, 'M', 'CALCIUM ACETATE', 7.0]]}, '4wyu': {'reservoir': [[10.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'POTASSIUM IODIDE', None], [0.1, 'M', 'HEPES', 7.5]]}, '3ine': {'reservoir': [[8.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.1, 'M', 'SODIUM ACETATE', 5.4]]}, '3g27': {'reservoir': [[0.2, 'M', 'CALCIUM CHLORIDE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', 7.0]]}, '3nlo': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.1, 'M', 'MES', 5.8], [0.1, 'M', 'AMMONIUM ACETATE', None], [0.005, 'M', 'GLUTATHIONE, REDUCED', None], [3.5e-05, 'M', 'SODIUM DODECYL SULFATE', None]]}, '5by0': {'reservoir': [[0.1, 'M', 'MAGNESIUM CHLORIDE', None], [0.1, 'M', 'BIS-TRIS', 6.3], [25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '1ea1': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [10.0, 'V/V', '2-PROPANOL', None], [0.1, 'M', 'HEPES', 7.5]]}, '4njz': {'reservoir': [[0.2, 'M', 'SODIUM CITRATE', None], [0.1, 'M', 'SODIUM CACODYLATE', 6.5], [30.0, 'V/V', '2-PROPANOL', None]]}, '3e1j': {'reservoir': [[1.8, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'TRISODIUM CITRATE', 5.0]]}, '3dyd': {'reservoir': [[30.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None], [0.1, 'M', 'SODIUM ACETATE', 4.6], [0.003, 'M', 'PYRIDOXAL-5-PHOSPHATE', None]]}, '4l4e': {'reservoir': [[0.05, 'M', 'TRIS', None], [0.4, 'M', 'POTASSIUM CHLORIDE', None], [32.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.0012, 'M', 'D-CAMPHOR', 7.4]]}, '4yz5': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.25, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'HEPES', 8.0], [7.5, 'V/V', '2-PROPANOL', None]]}, '4oyk': {'reservoir': [[32.0, 'W/V', 'POLYETHYLENE GLYCOL 6000', None], [1.0, 'M', 'LITHIUM CHLORIDE', None], [0.1, 'M', 'TRIS', 8.4]]}, '4ycq': {'reservoir': [[0.1, 'M', 'CAPS', 10.5], [40.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None]]}, '3uv1': {'reservoir': [[0.1, 'M', 'BIS-TRIS', 7.4], [28.0, 'W/V', 'POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000', None]]}, '5ws4': {'reservoir': [[1.2, 'M', 'SODIUM CITRATE', None], [0.1, 'M', 'SODIUM HEPES', 7.2]]}, '4jdz': {'reservoir': [[0.2, 'M', 'CALCIUM CHLORIDE', None], [0.1, 'M', 'SODIUM HEPES', 8.0], [20.0, 'V/V', '2-PROPANOL', None]]}, '5kww': {'reservoir': [[1.54, 'M', 'POTASSIUM SODIUM TARTRATE', None], [0.2, 'M', 'LITHIUM SULFATE', None], [0.1, 'M', 'CHES', 9.5]]}, '4hk2': {'reservoir': [[2.4, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'CITRIC ACID', 4.0]]}, '3pms': {'reservoir': [[25.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.2, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'SODIUM ACETATE', 4.5]]}, '3qpe': {'reservoir': [[0.1, 'M', 'TRIS', None], [0.2, 'M', 'MAGNESIUM CHLORIDE', 8.5]]}, '3zed': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'POTASSIUM FLUORIDE', None]]}, '4i7u': {'reservoir': [[0.1, 'M', 'TRIS', 8.5], [2.0, 'M', 'AMMONIUM SULFATE', None]]}, '5szu': {'reservoir': [[0.1, 'M', 'TRIS', 8.5], [2.0, 'M', 'AMMONIUM PHOSPHATE', None]]}, '4r3h': {'reservoir': [[25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'BIS-TRIS', 6.5]]}, '3tgt': {'reservoir': [[14.0, 'W/V', 'POLYETHYLENE GLYCOL 1500', None], [12.0, 'V/V', 'POLYETHYLENE GLYCOL 400', None], [0.1, 'M', 'HEPES', None]]}, '3azc': {'reservoir': [[0.1, 'M', 'SODIUM HEPES', 7.5], [10.0, 'V/V', '2-PROPANOL', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3000', None], [15.0, 'V/V', 'GLYCEROL', None]]}, '3tq8': {'reservoir': [[0.1, 'M', 'HEPES', 7.5], [25.0, 'W/V', 'POLYETHYLENE GLYCOL 6000', None]]}, '4c79': {'reservoir': [[0.1, 'M', 'HEPES', 7.0], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 6000', None], [0.01, 'M', 'ZINC CHLORIDE', None]]}, '4r96': {'reservoir': [[1.4, 'M', 'SODIUM MALONATE', 6.0]]}, '6fao': {'reservoir': [[1.0, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'BIS-TRIS', 5.5], [1.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', 8.0]]}, '6ex7': {'reservoir': [[0.2, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'BIS-TRIS', 5.5], [25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.005, 'M', 'CADMIUM CHLORIDE', None]]}, '4it0': {'reservoir': [[20.0, 'V/V', 'SUCROSE', 7.0]]}, '3ot0': {'reservoir': [[0.04, 'M', 'SODIUM CACODYLATE', 6.0], [0.012, 'M', 'SPERMINE', None], [0.08, 'M', 'SODIUM CHLORIDE', None], [0.012, 'M', 'POTASSIUM CHLORIDE', None], [35.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None]]}, '5vn2': {'reservoir': [[20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.02, 'M', 'SODIUM ACETATE', None], [0.004, 'M', 'NICOTINAMIDE ADENINE DINUCLEOTIDE', None]]}, '3m3u': {'reservoir': [[0.1, 'M', 'SODIUM ACETATE', 4.8], [7.0, 'V/V', 'SODIUM CHLORIDE', None], [25.0, 'V/V', 'ETHYLENE GLYCOL', None]]}, '3c8s': {'reservoir': [[2.0, 'M', 'POTASSIUM SODIUM PHOSPHATE', 6.7], [0.05, 'M', 'BETA-MERCAPTOETHANOL', None], [0.05, 'M', 'BETA-MERCAPTOETHANOL', None]]}, '4k7r': {'reservoir': [[7.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'HEPES', 7.5]]}, '4o56': {'reservoir': [[2.0, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'BIS-TRIS', 6.5]]}, '3cem': {'reservoir': [[0.02, 'M', 'BES', 6.5], [0.001, 'M', 'EDTA', None], [0.0005, 'M', 'DITHIOTHREITOL', None]]}, '4fzq': {'reservoir': [[38.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None], [0.1, 'M', 'SODIUM ACETATE', 4.5]]}, '3guc': {'reservoir': [[1.0, 'M', 'LITHIUM SULFATE', None], [0.3, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'SODIUM CITRATE', 6.2]]}, '3u4v': {'reservoir': [[3.0, 'M', 'SODIUM CHLORIDE', 4.8]]}, '4hyr': {'reservoir': [[0.1, 'M', 'BIS-TRIS', 5.5], [25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '3hpq': {'reservoir': [[0.05, 'M', 'MES', 6.7], [0.001, 'M', 'EDTA', None], [0.05, 'M', 'MES', 7.0], [3.0, 'W/V', 'POLYETHYLENE GLYCOL 2000', None]]}, '1gn9': {'reservoir': [[25.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.1, 'M', 'MES', 6.0]]}, '5iks': {'reservoir': [[0.1, 'M', 'TRIS CHLORIDE', 7.4], [0.001, 'M', 'EDTA', None], [2.5, 'M', 'AMMONIUM SULFATE', None]]}, '4ckv': {'reservoir': [[0.1, 'W/V', 'N-DODECYL-B-D-MALTOSIDE', None], [0.005, 'M', 'HEPES', 7.5], [18.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.1, 'M', 'HEPES', 7.5]]}, '3aj3': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.15, 'M', 'AMMONIUM ACETATE', None], [0.1, 'M', 'SODIUM ACETATE', None]]}, '4dr8': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000', None], [0.15, 'M', 'POTASSIUM BROMIDE', 7.5]]}, '5csb': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.1, 'M', 'SODIUM ACETATE', None], [15.0, 'V/V', 'GLYCEROL', None], [0.2, 'M', 'AMMONIUM ACETATE', 4.5]]}, '3poy': {'reservoir': [[12.0, 'W/V', 'POLYETHYLENE GLYCOL 20000', None], [0.1, 'M', 'BICINE', 9.0], [0.001, 'M', 'EDTA', None], [0.15, 'M', 'SODIUM CHLORIDE', None]]}, '6ci9': {'reservoir': [[0.1, 'M', 'TRIS', None], [0.2, 'M', 'MAGNESIUM CHLORIDE', None], [13.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', 8.5]]}, '1a71': {'reservoir': [[0.005, 'M', '2,2,2-TRIFLUOROETHANOL', None], [18.0, 'V/V', 'POLYETHYLENE GLYCOL 400', None]]}, '3g7k': {'reservoir': [[0.15, 'M', 'TRIS CHLORIDE', 8.0], [0.15, 'M', 'SODIUM CHLORIDE', None], [23.0, 'W/V', 'POLYETHYLENE GLYCOL 1500', None], [18.0, 'V/V', 'GLYCEROL', None]]}, '4n5d': {'reservoir': [[0.3, 'M', 'AMMONIUM DIHYDROGEN PHOSPHATE', None], [0.1, 'M', 'TRIS', 8.5]]}, '4h80': {'reservoir': [[0.2, 'M', 'POTASSIUM ACETATE', None], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '3p55': {'reservoir': [[2.9, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'SODIUM MES', 6.5]]}, '5k8t': {'reservoir': [[10.0, 'W/V', 'POLYETHYLENE GLYCOL 6000', None], [5.0, 'V/V', '2-METHYL-2,4-PENTANEDIOL', None], [0.1, 'M', 'HEPES', 7.5]]}, '3f48': {'reservoir': [[0.1, 'M', 'HEPES', 7.0], [0.2, 'M', 'SODIUM CHLORIDE', None], [17.0, 'V/V', 'POLYETHYLENE GLYCOL MONOMETHYL ETHER 550', None]]}, '5pxk': {'reservoir': [[0.1, 'M', 'MES', 6.1], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 20000', 7.0]]}, '5xcu': {'reservoir': [[0.2, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'HEPES', 7.5], [25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '3e67': {'reservoir': [[0.05, 'M', 'MES', 5.3], [25.0, 'V/V', 'LITHIUM SULFATE', None]]}, '5fjp': {'reservoir': [[0.1, 'M', 'TRIS CHLORIDE', 8.0], [15.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [0.8, 'M', 'SODIUM FORMATE', None]]}, '3bq9': {'reservoir': [[0.1, 'M', 'HEPES', 7.5], [2.0, 'M', 'AMMONIUM SULFATE', None], [10.0, 'V/V', 'GLYCEROL', None]]}, '4pkv': {'reservoir': [[11.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.05, 'M', 'BIS-TRIS', 6.8], [0.1, 'M', 'MAGNESIUM ACETATE', None]]}, '4ddb': {'reservoir': [[0.05, 'M', 'SODIUM ACETATE', 6.5], [10.0, 'V/V', 'SODIUM CHLORIDE', None]]}, '4i6u': {'reservoir': [[0.1, 'M', 'SODIUM SULFATE', None], [0.2, 'M', 'SODIUM ACETATE', None], [0.1, 'M', 'BIS-TRIS PROPANE', 8.5], [20.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None]]}, '4v0c': {'reservoir': [[0.3, 'M', 'POTASSIUM THIOCYANATE', None], [0.1, 'M', 'SODIUM ACETATE', 5.6], [0.005, 'M', 'CALCIUM CHLORIDE', None]]}, '3lgb': {'reservoir': [[0.1, 'M', 'TRIS CHLORIDE', 7.5], [0.001, 'M', 'ZINC ACETATE', None], [11.0, 'V/V', 'ETHANOL', None]]}, '4w7v': {'reservoir': [[0.1, 'M', 'SODIUM CACODYLATE', 6.5], [0.2, 'M', 'SODIUM ACETATE', None], [28.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [5.0, 'V/V', 'GLYCEROL', None]]}, '3fp0': {'reservoir': [[2.0, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'HEPES', 7.5]]}, '5wav': {'reservoir': [[0.1, 'M', 'HEPES', 7.5], [10.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [8.0, 'V/V', 'ETHYLENE GLYCOL', None]]}, '6fkj': {'reservoir': [[5.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [12.0, 'V/V', 'GLYCEROL', None], [0.03, 'M', 'MAGNESIUM CHLORIDE', None], [0.03, 'M', 'CALCIUM CHLORIDE', None], [0.1, 'M', 'MES-IMIDAZOLE', 6.7]]}, '4jpo': {'reservoir': [[3.0, 'M', 'SODIUM FORMATE', None], [0.1, 'M', 'BIS-TRIS', 7.0], [0.01, 'M', 'CALCIUM CHLORIDE', None]]}, '4xye': {'reservoir': [[0.1, 'M', 'MES', 6.5], [12.0, 'W/V', 'POLYETHYLENE GLYCOL MONOMETHYL ETHER 2000', None]]}, '4g1f': {'reservoir': [[22.5, 'V/V', 'POLYETHYLENE GLYCOL MONOMETHYLETHER 2000', None], [0.1, 'M', 'BICINE', 7.8]]}, '5iy0': {'reservoir': [[0.1, 'M', 'HEPES', None], [10.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None]]}, '5j0d': {'reservoir': [[25.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.2, 'M', 'MAGNESIUM CHLORIDE', None], [0.1, 'M', 'BIS-TRIS', 7.5]]}, '3bqv': {'reservoir': [[30.0, 'W/V', 'POLYETHYLENE GLYCOL 8000', None], [0.1, 'M', 'SODIUM CACODYLATE', 6.5], [0.2, 'M', 'SODIUM ACETATE', None]]}, '3gc8': {'reservoir': [[12.0, 'W/V', 'POLYETHYLENE GLYCOL 3350', None], [0.12, 'M', 'AMMONIUM FLUORIDE', None], [3e-05, 'M', 'CTAB', 7.4]]}, '4x3a': {'reservoir': [[1.15, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'TRIS', None], [0.2, 'M', 'LITHIUM SULFATE', None]]}, '4apj': {'reservoir': [[0.05, 'M', 'SODIUM ACETATE', 4.7], [15.0, 'W/V', 'POLYETHYLENE GLYCOL 4000', None], [1e-05, 'M', 'ZINC SULFATE', None]]}, '5mcd': {'reservoir': [[0.9, 'M', 'AMMONIUM SULFATE', None], [0.1, 'M', 'SODIUM CITRATE', 4.0]]}}
+[]
+{'SODIUM HEPES': set(['HEPES SODIUM']), 'SODIUM MES': set(['MES/NAOH']), '2-METHYL-2,4-PENTANEDIOL': set(['2-METHYL-2,4- PENTANEDIOL', '2-METHYLPENTANE-2,4-DIOL', 'MPD (MPD)']), 'CHES': set(['NA-CHES']), 'SODIUM PHOSPHATE': set(['PHOPHATE']), 'SPERMINE': set(['SPERMINE ']), 'SODIUM AZIDE': set(['NAN3']), 'SODIUM CITRATE': set(['CITRIC ACID', 'NA CITRATE']), 'LITHIUM SULFATE': set(['LISO4', 'LI SULFATE', 'LITHIUM  SULFATE']), 'POLYETHYLENE GLYCOL 20000': set(['PEG20K']), 'TRIS CHLORIDE': set(['TRIS/HCL', 'TRIS HCL', 'TRISCL']), 'MAGNESIUM ACETATE': set(['MGAC2']), 'GLYCEROL': set(['GLYCEROL ']), 'SODIUM ACETATE': set(['NAACETATE']), 'AMMONIUM SULFATE': set(['NH4SO4', 'NH4)2SO4', 'AMMONIUM  SULFATE']), 'TRISODIUM CITRATE': set(['TRI- SODIUM CITRATE']), 'PROTEIN': set(['ENZYME']), 'MAGNESIUM CHLORIDE': set(['MGCL2'])}

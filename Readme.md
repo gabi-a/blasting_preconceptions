@@ -47,6 +47,7 @@ db\
    * `output/chem_list.xml` lists all chems found
    * `output/chemfreq_resolved_out.xml` lists the frequency of all chems found
    * `output/chem_alia.xml` lists aliases used if any
+   * `unknown_chems.pkl` a dictionary of chems which could not be identified, key is pdb code
    
 3. We now convert the parsed xml to a dictionary, and also save a list of all\
    parsed, non empty pdb codes for later use.\

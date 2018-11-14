@@ -32,6 +32,9 @@ for i,pdbcode in enumerate(pdbcodes):
             continue
         conds2 = chemsdict[pdbcode2]
 
+        print("========================")
+        print(conds1)
+        print(conds2)
         c6score = C6scorer.c6_score(conds1, conds2)
         c6results.append((c6score, seqident))
 
