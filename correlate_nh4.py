@@ -34,6 +34,7 @@ for i,pdbcode in enumerate(pdbcodes):
         continue
 
     for seqid, seqident in zip(blastresult['f1'], blastresult['f2']):
+
         pdbcode2 = seqid[:4].decode("ascii").lower()
         if pdbcode2 not in pdbcodes:
             continue

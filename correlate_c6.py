@@ -27,6 +27,7 @@ for i,pdbcode in enumerate(pdbcodes):
     conds1 = chemsdict[pdbcode]
 
     for seqid, seqident in zip(blastresult['f1'], blastresult['f2']):
+
         pdbcode2 = seqid[:4].decode("ascii").lower()
         if pdbcode2 not in pdbcodes:
             continue

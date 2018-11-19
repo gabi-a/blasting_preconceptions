@@ -31,7 +31,7 @@ for i,(meta,seq) in enumerate(zip(sequenceslines[0::2],sequenceslines[1::2])):
 
     blastout = os.path.join(blastoutdir, pdbcode + ".csv")
     
-    cmd = "blastp -query " +seqfile.name + " -db " + blastdb + " -out " + blastout + " -outfmt 10"
+    cmd = "blastp -query " + seqfile.name + " -db " + blastdb + " -out " + blastout + " -outfmt 10"
     
     try:
         subprocess.call(cmd, shell=True)

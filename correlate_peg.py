@@ -20,8 +20,10 @@ for i,pdbcode in enumerate(pdbcodes):
     peg1 = None
     for cond in conds1:
         if "POLYETHYLENE GLYCOL" in cond["chem"] and cond["units"] == "W/V":
-            peg1 = cond
-            break
+            weight = int(cond["chem"].split(" ")[-1])
+            if weight >= 1450:
+                peg1 = cond
+                break
 
     if not peg1:
         continue
@@ -36,6 +38,7 @@ for i,pdbcode in enumerate(pdbcodes):
         continue
     
     for seqid, seqident in zip(blastresult['f1'], blastresult['f2']):
+
         pdbcode2 = seqid[:4].decode("ascii").lower()
         if pdbcode2 not in pdbcodes:
             continue
@@ -44,8 +47,10 @@ for i,pdbcode in enumerate(pdbcodes):
         peg2 = False
         for cond in conds2:
             if "POLYETHYLENE GLYCOL" in cond["chem"] and cond["units"] == "W/V":
-                peg2 = cond
-                break
+                weight = int(cond["chem"].split(" ")[-1])
+                if weight >= 1450:
+                    peg2 = cond
+                    break
         if peg2:
             _peg1 = (int(peg1["chem"].split(" ")[-1]), float(peg1["conc"]))
             _peg2 = (int(peg2["chem"].split(" ")[-1]), float(peg2["conc"]))
@@ -53,4 +58,4 @@ for i,pdbcode in enumerate(pdbcodes):
             pegresults.append((pegscore, seqident))
 
 pegresults = np.asarray(pegresults)
-np.save("db/peg_results", pegresults)
+np.save("db/peg_results_g95", pegresults)

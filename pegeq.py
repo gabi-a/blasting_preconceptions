@@ -39,6 +39,7 @@ def main():
     means = np.asarray(means)
 
     filter_1450 = np.where(means[:,0] >= 1450)
+    filter_1000 = np.where(means[:,0] < 1450)
 
     # slope1, intercept1, r_value1, p_value1, std_err1 = stats.linregress(np.log(PEGdata[:,1]), PEGdata[filter_1450,0])
     slope2, intercept2, r_value2, p_value2, std_err2 = stats.linregress(np.log(means[filter_1450,0]), means[filter_1450,1])
@@ -52,18 +53,23 @@ def main():
     pickle.dump(slope2, open("db/pegeq.pkl","wb"))
 
     plt.scatter(means[filter_1450,0], means[filter_1450,1], color="r", zorder=1)
+    plt.scatter(means[filter_1000,0], means[filter_1000,1], color="g", zorder=1)
+
     max_count = np.max(means[filter_1450,3])
     for conc_stats in means:
-        if conc_stats[0] >= 1450:
-            plt.errorbar(conc_stats[0],conc_stats[1],conc_stats[2], elinewidth=round(np.log((100*conc_stats[3]/max_count + 1))), ecolor=(conc_stats[3]/max_count, 0.5, 0.5), zorder=0)
+        # if conc_stats[0] >= 1450:
+        plt.errorbar(conc_stats[0],conc_stats[1],conc_stats[2], elinewidth=round(np.log((100*conc_stats[3]/max_count + 1))), zorder=0, ecolor=(0.5,0.7,0.7))
     # plt.xlabel("Molecular Weight")
     # plt.ylabel("Mean Concentration (W/V)")
     plt.xscale("log")
 
-    ticks = np.array(np.sort(np.unique(PEGdata[:,1])),dtype=int)
-    plt.xticks(ticks[::2],ticks[::2], rotation=45)
+    # ticks = np.array(np.sort(np.unique(PEGdata[:,1])),dtype=int)
+    ticks = [200,300,350,400,550,600,750,1000,1500,2000,3000,3350,4000,5000,6000,8000,10000,20000]
+    # print(ticks)
+    plt.xticks(ticks,ticks, rotation=45)
 
     plt.plot(np.arange(np.min(means[filter_1450,0]), np.max(means[filter_1450,0]), 1), slope2*np.log(np.arange(np.min(means[filter_1450,0]), np.max(means[filter_1450,0]), 1))+intercept2, "b")
+    plt.xlim(150,25000)
     plt.tight_layout(pad=0.1, w_pad=0.01, h_pad=0.5)
     plt.savefig("images/pegeq",dpi=800)
     plt.figure()
