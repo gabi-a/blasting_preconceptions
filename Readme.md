@@ -1,5 +1,7 @@
 # CSIRO C3 : BLASTing away preconceptions in crystallisation trials
 
+Publication DOI: https://doi.org/10.1107/s2053230x19000141
+
 ### WARNING
 What follows are not always clear instructions - they are my notes in case I need to go back to any step.\
 Running the steps out of order will likely fail due to files missing which should have been generated\
