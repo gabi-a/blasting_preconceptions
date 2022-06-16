@@ -3137,7 +3137,7 @@ class CRYSTAL_PARSER(CRYSTAL_PARSER_NAMES):
             self.CHEM_UNKNOWN+=1
             self.CHEM_FAIL+=1
             self.NUM_FAILED_PARTS+=1
-            self.CHEM_UNKNOWN_DICT[pdb] = self.CHEM_UNKOWN_DICT.setdefault(pdb, [])
+            self.CHEM_UNKNOWN_DICT[pdb] = self.CHEM_UNKNOWN_DICT.setdefault(pdb, [])
             self.CHEM_UNKNOWN_DICT[pdb].append(CHEMICALS[i])
             continue
 
